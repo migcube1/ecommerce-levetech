@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('normalize.css');
+
+/* Configuración*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/* Variables */
+
+:root {
+    --fuente: 'Open Sans', sans-serif;
+    --fondo: #D6D6D6;
+    --ancho-contenedor: 1200px;
+    --rojo: #C60D0D;
+    --amarrillo: #E9B521;
+    --gris: #2A2A2A;
+}
+
+
+/*Estilos Generales*/
+
+body {
+    background-color: var(--fondo);
+    font-family: var(--fuente);
+    font-size: 18px;
+}
+
+p {
+    line-height: 27px;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}

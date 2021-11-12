@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shorcut icon" href="assets/img/iconLevetech.png" type="image/x-icon">
     <title>levetech shop</title>
 
+    <!-- ICONS-->
+    <link rel="shorcut icon" href="assets/img/iconLevetech.png" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="stylesheet" href="assets/css/estilos.css">
 
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav bg-blanco texto-azul">
+        <nav class="nav bg-blanco texto-azul py-2">
             <div class="contenedor">
-                <a href="#" class="activo"> 
+                <a href="#" class="activo">
                     <img src="assets/img/iconLevetech2.png" class="logoIcon">
                     <!--Inicio -->
                 </a>
@@ -28,68 +31,39 @@
                 <button type="button" class="boton boton-azul"> Registar</button>
             </div>
         </nav>
-		<div class="icon2">
-			<a href="index.html">
-				
-			</a>
-		</div>
     </header>
 
-    <div class="contenedor-ancho">
-        <main>
+    <div id="banner-img" class="contenedor-ancho rx-0 my-0">
+        <main class="contenido-banner texto-blanco r-5">
             <h1>levetech shop</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </main>
     </div>
 
     <div class="contenedor-ancho">
         <div class="grid col-4 med-col-2 peq-col-1">
-            <div class="card">
+            <div class="card texto-justificado m-0">
                 <img src="assets/img/producto.jpg" alt="producto">
-                <h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.</h4>
-                <h3>$ 1,000.00</h3>
-                <h5 class="no-margen-inferior texto-gris">Antes: $2,000.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Costo de envío: $99.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Disponibles: 100 pz</h5>
-                <button type="button" class="boton boton-azul boton-list">Añadir</button>
+                <h4 class="ms-1">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
+                </h4>
+                <h3 class="mi-0">$ 1,000.00</h3>
+                <h5 class="mi-0 texto-gris">Antes: $2,000.00</h5>
+                <h5 class="mi-0 texto-gris">Costo de envío: $99.00</h5>
+                <h5 class="mi-0 texto-gris">Disponibles: 100 pz</h5>
+                <h5 class="mi-1 texto-gris">Puntuación: 4.5</h5>
+                <div class="d-flex justificar-contenido-final ">
+                    <button type="button" class="boton boton-blanco texto-azul borde borde-azul">Añadir</button>
+                </div>
+
             </div>
 
-            <div class="card">
-                <img src="assets/img/producto.jpg" alt="producto">
-                <h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.</h4>
-                <h3>$ 1,000.00</h3>
-                <h5 class="no-margen-inferior texto-gris">Antes: $2,000.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Costo de envío: $99.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Disponibles: 100 pz</h5>
-                <button type="button" class="boton boton-azul boton-list">Añadir</button>
-            </div>
 
-            <div class="card">
-                <img src="assets/img/producto.jpg" alt="producto">
-                <h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.</h4>
-                <h3>$ 1,000.00</h3>
-                <h5 class="no-margen-inferior texto-gris">Antes: $2,000.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Costo de envío: $99.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Disponibles: 100 pz</h5>
-                <button type="button" class="boton boton-azul boton-list">Añadir</button>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/producto.jpg" alt="producto">
-                <h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.</h4>
-                <h3>$ 1,000.00</h3>
-                <h5 class="no-margen-inferior texto-gris">Antes: $2,000.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Costo de envío: $99.00</h5>
-                <h5 class="no-margen-inferior texto-gris">Disponibles: 100 pz</h5>
-                <button type="button" class="boton boton-azul boton-list">Añadir</button>
-            </div>
         </div>
 
     </div>
 
-    <div class="contenedor-ancho">
+    <div class="contenedor-ancho bg-blanco mi-0 ry-4">
         <div class="grid col-2 peq-col-1">
             <div class="texto-centrado">
                 <h5>1, 500,000+ </h5>
@@ -114,20 +88,20 @@
         </div>
         <div class="social-media">
             <a class="social-media-icon" href="https://www.facebook.com/" target="_black" rel="noopener noreferrer">
-                <i class='bx bxl-facebook' ></i>
+                <i class='bx bxl-facebook'></i>
             </a>
-            <a class="social-media-icon" href="https://instagram.com/" target="_black" rel="noopener noreferrer" >
-                <i class='bx bxl-instagram' ></i>
+            <a class="social-media-icon" href="https://instagram.com/" target="_black" rel="noopener noreferrer">
+                <i class='bx bxl-instagram'></i>
             </a>
-            <a class="social-media-icon" href="https://www.pinterest.com.mx/" target="_black" rel="noopener noreferrer" >
-                <i class='bx bxl-pinterest-alt' ></i>
+            <a class="social-media-icon" href="https://www.pinterest.com.mx/" target="_black" rel="noopener noreferrer">
+                <i class='bx bxl-pinterest-alt'></i>
             </a>
-            <a class="social-media-icon" href="https://www.twitter.com/" target="_black" rel="noopener noreferrer" >
-                <i class='bx bxl-twitter' ></i>
+            <a class="social-media-icon" href="https://www.twitter.com/" target="_black" rel="noopener noreferrer">
+                <i class='bx bxl-twitter'></i>
             </a>
         </div>
         <div class="line"></div>
-        
+
     </footer>
 
     <!--Jquery JS-->

@@ -61,6 +61,34 @@
         </main>
     </div>
 
+    
+    <div class="contenedor-slider contenedor-ancho">
+        <!--imágenes del slider-->
+        <div class="slider fade active-slider">
+            <img src="/assets/img/slider/ofertas_1.jpg" alt="">
+        </div>
+        <div class="slider fade">
+            <img src="/assets/img/slider/ofertas_2.jpg" alt="">
+        </div>
+        <div class="slider fade">
+            <img src="/assets/img/slider/ofertas_3.jpg" alt="">
+        </div>
+        <!--Direcciones-->
+        <div class="direcciones anterior texto-azul">
+            <a class = "r-2" onclick="avanzaSlide(-1)">&#10094</a>
+        </div>
+        <div class="direcciones siguiente texto-azul">
+            <a class = "r-2" onclick="avanzaSlide(1)">&#10095</a>
+        </div>
+        <!--Puntos-->
+        <div class="dots">
+            <span class="dot  active-dot" onclick="positionSlider(1)"></span>
+            <span class="dot" onclick="positionSlider(2)"></span>
+            <span class="dot" onclick="positionSlider(3)"></span>
+        </div>
+    </div>
+
+
     <div class="contenedor-ancho ">
         <div class="grid col-4 med-col-2 peq-col-1 ">
             <div class="card texto-justificado m-0 ">
@@ -244,6 +272,8 @@
 
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>
+
+    <script src="assets/js/sliders.js "></script>
 
 </body>
 

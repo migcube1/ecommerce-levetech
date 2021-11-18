@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>levetech shop</title>
+    <title>Levetech Shop</title>
 
     <!-- ICONS-->
     <link rel="shorcut icon" href="assets/img/iconLevetech.png" type="image/x-icon">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="stylesheet" href="assets/css/estilos.css">
 
 </head>
@@ -20,137 +19,122 @@
 <body>
     <!--header-->
     <header>
-        <nav class="nav bg-blanco texto-azul py-2">
-            <div class="contenedor">
+        <nav class="nav ">
+            <a href="index.html" class="nav-logo nav-enlace">
+                <!-- <img src="assets/img/iconLevetech2.png " alt="icono levetech " class=""> -->
+                Levetech
+            </a>
+            <button type="button" class=" nav-toggle ">
+                    <i class='bx bx-menu'></i>
+            </button>
 
-                <li class="nav-item">
-                    <a href="#" class="activo">
-                        <img src="assets/img/iconLevetech2.png" class="logoIcon">
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-enlace">Inicio</a>
-                </li>
-
-                <li class="nav-item menu" id="navMenu">
-                    <a href="#" class="nav-enlace menu-toggle"> Categorias</a>
-                    <div class="menu-desplegable">
-                        <a href="" class="nav-enlace">1</a>
-                        <a href="" class="nav-enlace">2</a>
-                        <a href="" class="nav-enlace">3</a>
-                    </div>
-                </li>
-
+            <ul class="nav-menu">
                 <li class="nav-item ">
-                    <a href="# " class="nav-enlace "> Acerca de</a>
+                    <a href="index.html" class="nav-menu-enlace ">Inicio</a>
                 </li>
-
                 <li class="nav-item ">
-                    <button type="button " class="boton boton-azul md-2 ">Iniciar Sesión</button>
-                    <button type="button " class="boton boton-azul "> Registar</button>
+                    <a href="# " class="nav-menu-enlace ">Categorias</a>
                 </li>
-
-            </div>
+                <li class="nav-item ">
+                    <a href="# " class="nav-menu-enlace "> Inicio Sesión</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="# " class="nav-menu-enlace ">Registrar</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="# " class="nav-menu-enlace ">Acerca de</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <!--banner-->
-    <div id="banner-img" class="contenedor-ancho rx-0 my-0 ">
-        <main class="grid contenido-banner texto-blanco r-5 ">
-            <h1>levetech shop</h1>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </main>
-    </div>
-
     <!--slider-->
-    <div class="contenedor-slider contenedor-ancho">
+    <div class="contenedor-slider contenedor-ancho ">
         <!--imágenes del slider-->
-        <div class="slider fade active-slider">
-            <img src="/assets/img/slider/ofertas_1.jpg" alt="">
+        <div class="slider fade active-slider ">
+            <img src="/assets/img/slider/ofertas_1.jpg " alt=" ">
         </div>
-        <div class="slider fade">
-            <img src="/assets/img/slider/ofertas_2.jpg" alt="">
+        <div class="slider fade ">
+            <img src="/assets/img/slider/ofertas_2.jpg " alt=" ">
         </div>
-        <div class="slider fade">
-            <img src="/assets/img/slider/ofertas_3.jpg" alt="">
+        <div class="slider fade ">
+            <img src="/assets/img/slider/ofertas_3.jpg " alt=" ">
         </div>
         <!--Direcciones-->
-        <div class="direcciones anterior texto-azul">
-            <a class="r-2" onclick="avanzaSlide(-1)">&#10094</a>
+        <div class="direcciones anterior texto-azul ">
+            <a class="r-2 " onclick="avanzaSlide(-1) ">&#10094</a>
         </div>
-        <div class="direcciones siguiente texto-azul">
-            <a class="r-2" onclick="avanzaSlide(1)">&#10095</a>
+        <div class="direcciones siguiente texto-azul ">
+            <a class="r-2 " onclick="avanzaSlide(1) ">&#10095</a>
         </div>
         <!--Puntos-->
-        <div class="dots">
-            <span class="dot  active-dot" onclick="positionSlider(1)"></span>
-            <span class="dot" onclick="positionSlider(2)"></span>
-            <span class="dot" onclick="positionSlider(3)"></span>
+        <div class="dots ">
+            <span class="dot active-dot " onclick="positionSlider(1) "></span>
+            <span class="dot " onclick="positionSlider(2) "></span>
+            <span class="dot " onclick="positionSlider(3) "></span>
         </div>
     </div>
 
     <!-- contenedor Productos-->
     <div class="contenedor-ancho ">
         <div class="grid col-4 med-col-2 peq-col-1 ">
-
-            <div class="card">
+            <div class="card ">
                 <img src="assets/img/productos/PRODUCT01.jpg " alt="producto ">
-                <div class="card-contenido">
+                <div class="card-contenido ">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
                     </p>
-                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h3 class="mi-1 ">$ 1,000.00</h3>
                     <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
                     <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
                     <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul">Añadir</button>
+                    <button type="button " class="boton boton-azul ">Añadir</button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card ">
                 <img src="assets/img/productos/PRODUCT03.jpg " alt="producto ">
-                <div class="card-contenido">
+                <div class="card-contenido ">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
                     </p>
-                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h3 class="mi-1 ">$ 1,000.00</h3>
                     <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
                     <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
                     <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul">Añadir</button>
+                    <button type="button " class="boton boton-azul ">Añadir</button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card ">
                 <img src="assets/img/productos/PRODUCT05.jpg " alt="producto ">
-                <div class="card-contenido">
+                <div class="card-contenido ">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
                     </p>
-                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h3 class="mi-1 ">$ 1,000.00</h3>
                     <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
                     <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
                     <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul">Añadir</button>
+                    <button type="button " class="boton boton-azul ">Añadir</button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card ">
                 <img src="assets/img/productos/PRODUCT07.jpg " alt="producto ">
-                <div class="card-contenido">
+                <div class="card-contenido ">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
                     </p>
-                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h3 class="mi-1 ">$ 1,000.00</h3>
                     <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
                     <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
                     <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul">Añadir</button>
+                    <button type="button " class="boton boton-azul ">Añadir</button>
                 </div>
             </div>
 
@@ -159,33 +143,34 @@
     </div>
 
     <!-- banner de las marcas-->
-    <div class="contenedor-ancho bg-blanco mi-0 ry-4 ">
-        <div class="grid col-2 peq-col-1 ">
-            <div class="texto-centrado ">
-                <h5>1, 500,000+ </h5>
-                <p>Lorem ipsum dolor sit amet consectetur. </p>
+    <div class="contenedor-ancho bg-blanco ry-2 mi-0">
+        <div class="grid col-2 mi-0 ms-2">
+            <div class="texto-centrado span-1 med-span-2 mi-3">
+                <h5>Más de 1,000 marcas </h5>
+                <p>¡En Levetech encuentras sólo las mejores marcas!</p>
             </div>
-            <div class="grid col-4 med-col-2 ">
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
-                <div>icono</div>
+            <div class="grid col-4 med-col-3 peq-col-2 span-1 med-span-2">
+                <a href="#"><img src="assets/img/marcas/asus.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/amd.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/acer.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/lenovo.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/gigabyte.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/msi.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/logitech.webp" alt=""></a>
+                <a href="#"><img src="assets/img/marcas/kingston.webp" alt=""></a>
+                <a href="#" class="d-peq-none d-med-block d-none"><img src="assets/img/marcas/westerndigital.webp" alt=""></a>
             </div>
         </div>
     </div>
 
     <!--footer-->
-    <footer class="footer, bg-negro ">
+    <footer class="footer bg-negro ">
         <div class="contenedor-ancho bg-negro texto-blanco texto-centrado ">
-            <div class="grid col-2 peq-col-1">
-                <div class="ry-2">
+            <div class="grid col-2 peq-col-1 ">
+                <div class="ry-2 ">
                     &copy; 2021 levetech. Todos los derechos reservados.
                 </div>
-                <div class="social-media d-flex justificar-contenido-centrado">
+                <div class="social-media d-flex justificar-contenido-centrado ">
                     <a class="social-media-icon " href="https://www.facebook.com/ " target="_black " rel="noopener noreferrer ">
                         <i class='bx bxl-facebook'></i>
                     </a>
@@ -201,7 +186,7 @@
                 </div>
             </div>
         </div>
-        <div class="line my-3"></div>
+        <div class="line my-3 "></div>
     </footer>
 
     <!--Jquery JS-->

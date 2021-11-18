@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!--header-->
     <header>
         <nav class="nav bg-blanco texto-azul py-2">
             <div class="contenedor">
@@ -54,6 +55,7 @@
         </nav>
     </header>
 
+    <!--banner-->
     <div id="banner-img" class="contenedor-ancho rx-0 my-0 ">
         <main class="grid contenido-banner texto-blanco r-5 ">
             <h1>levetech shop</h1>
@@ -61,7 +63,7 @@
         </main>
     </div>
 
-    
+    <!--slider-->
     <div class="contenedor-slider contenedor-ancho">
         <!--imágenes del slider-->
         <div class="slider fade active-slider">
@@ -75,10 +77,10 @@
         </div>
         <!--Direcciones-->
         <div class="direcciones anterior texto-azul">
-            <a class = "r-2" onclick="avanzaSlide(-1)">&#10094</a>
+            <a class="r-2" onclick="avanzaSlide(-1)">&#10094</a>
         </div>
         <div class="direcciones siguiente texto-azul">
-            <a class = "r-2" onclick="avanzaSlide(1)">&#10095</a>
+            <a class="r-2" onclick="avanzaSlide(1)">&#10095</a>
         </div>
         <!--Puntos-->
         <div class="dots">
@@ -88,141 +90,75 @@
         </div>
     </div>
 
-
+    <!-- contenedor Productos-->
     <div class="contenedor-ancho ">
         <div class="grid col-4 med-col-2 peq-col-1 ">
-            <div class="card texto-justificado m-0 ">
+
+            <div class="card">
                 <img src="assets/img/productos/PRODUCT01.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
+                <div class="card-contenido">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
+                    </p>
+                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
+                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
+                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
+                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
+                    <button type="button " class="boton boton-azul">Añadir</button>
                 </div>
             </div>
 
-            <div class="card texto-justificado m-0 ">
-                <img src="assets/img/productos/PRODUCT02.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
-                </div>
-            </div>
-
-            <div class="card texto-justificado m-0 ">
+            <div class="card">
                 <img src="assets/img/productos/PRODUCT03.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
+                <div class="card-contenido">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
+                    </p>
+                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
+                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
+                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
+                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
+                    <button type="button " class="boton boton-azul">Añadir</button>
                 </div>
             </div>
 
-            <div class="card texto-justificado m-0 ">
-                <img src="assets/img/productos/PRODUCT04.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
-                </div>
-            </div>
-
-
-            <div class="card texto-justificado m-0 ">
+            <div class="card">
                 <img src="assets/img/productos/PRODUCT05.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
+                <div class="card-contenido">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
+                    </p>
+                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
+                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
+                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
+                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
+                    <button type="button " class="boton boton-azul">Añadir</button>
                 </div>
             </div>
 
-
-
-            <div class="card texto-justificado m-0 ">
-                <img src="assets/img/productos/PRODUCT06.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
-                </div>
-            </div>
-
-
-
-            <div class="card texto-justificado m-0 ">
+            <div class="card">
                 <img src="assets/img/productos/PRODUCT07.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
+                <div class="card-contenido">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
+                    </p>
+                    <h3 class="mi-1">$ 1,000.00</h3>
+                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
+                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
+                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
+                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
+                    <button type="button " class="boton boton-azul">Añadir</button>
                 </div>
             </div>
-
-
-
-            <div class="card texto-justificado m-0 ">
-                <img src="assets/img/productos/PRODUCT08.jpg " alt="producto ">
-                <h4 class="ms-1 ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                </h4>
-                <h3 class="mi-0 ">$ 1,000.00</h3>
-                <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                <div class="d-flex justificar-contenido-final ">
-                    <button type="button " class="boton boton-blanco texto-azul borde borde-azul ">Añadir</button>
-                </div>
-            </div>
-
 
         </div>
 
     </div>
 
+    <!-- banner de las marcas-->
     <div class="contenedor-ancho bg-blanco mi-0 ry-4 ">
         <div class="grid col-2 peq-col-1 ">
             <div class="texto-centrado ">
@@ -242,6 +178,7 @@
         </div>
     </div>
 
+    <!--footer-->
     <footer class="footer, bg-negro ">
         <div class="contenedor-ancho bg-negro texto-blanco texto-centrado ">
             <div class="grid col-2 peq-col-1">

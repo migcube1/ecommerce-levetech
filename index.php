@@ -1,3 +1,12 @@
+<?php
+    include('modelos/Producto.php');
+
+    $ProductoModelo = new Producto();
+    $productos = $ProductoModelo ->obtenerProductos();
+
+?> 
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -52,13 +61,13 @@
     <div class="contenedor-slider contenedor-ancho ">
         <!--imágenes del slider-->
         <div class="slider fade active-slider ">
-            <img src="/assets/img/slider/ofertas_1.jpg " alt=" ">
+            <img src="assets/img/slider/ofertas_1.jpg " alt=" ">
         </div>
         <div class="slider fade ">
-            <img src="/assets/img/slider/ofertas_2.jpg " alt=" ">
+            <img src="assets/img/slider/ofertas_2.jpg " alt=" ">
         </div>
         <div class="slider fade ">
-            <img src="/assets/img/slider/ofertas_3.jpg " alt=" ">
+            <img src="assets/img/slider/ofertas_3.jpg " alt=" ">
         </div>
         <!--Direcciones-->
         <div class="direcciones anterior texto-azul ">
@@ -78,65 +87,23 @@
     <!-- contenedor Productos-->
     <div class="contenedor-ancho ">
         <div class="grid col-4 med-col-2 peq-col-1 ">
+
+            <?php foreach($productos as $producto): ?>
+
             <div class="card ">
-                <img src="assets/img/productos/PRODUCT01.jpg " alt="producto ">
+                <img src="assets/img/productos/<?= $producto['imagen']?>" alt="<?= $producto['descripcion'] ?>">
                 <div class="card-contenido ">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                    </p>
-                    <h3 class="mi-1 ">$ 1,000.00</h3>
-                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
+                    <p> <?= $producto['descripcionDetallada'] ?></p>
+                    <h3 class="mi-1 ">$ <?= $producto['precioOferta']?></h3>
+                    <h5 class="mi-0 texto-gris ">Antes: $ <?= $producto['precio']?></h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
+                    <h5 class="mi-0 texto-gris ">Disponibles: <?= $producto['stock']?> pz</h5>
+                    <h5 class="mi-1 texto-gris ">Puntuación: <?= $producto['puntuacion']?></h5>
                     <button type="button " class="boton boton-azul ">Añadir</button>
                 </div>
             </div>
 
-            <div class="card ">
-                <img src="assets/img/productos/PRODUCT03.jpg " alt="producto ">
-                <div class="card-contenido ">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                    </p>
-                    <h3 class="mi-1 ">$ 1,000.00</h3>
-                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul ">Añadir</button>
-                </div>
-            </div>
-
-            <div class="card ">
-                <img src="assets/img/productos/PRODUCT05.jpg " alt="producto ">
-                <div class="card-contenido ">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                    </p>
-                    <h3 class="mi-1 ">$ 1,000.00</h3>
-                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul ">Añadir</button>
-                </div>
-            </div>
-
-            <div class="card ">
-                <img src="assets/img/productos/PRODUCT07.jpg " alt="producto ">
-                <div class="card-contenido ">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere culpa, qui placeat.
-                    </p>
-                    <h3 class="mi-1 ">$ 1,000.00</h3>
-                    <h5 class="mi-0 texto-gris ">Antes: $2,000.00</h5>
-                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
-                    <h5 class="mi-0 texto-gris ">Disponibles: 100 pz</h5>
-                    <h5 class="mi-1 texto-gris ">Puntuación: 4.5</h5>
-                    <button type="button " class="boton boton-azul ">Añadir</button>
-                </div>
-            </div>
+            <?php endforeach; ?>
 
         </div>
 

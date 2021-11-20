@@ -371,10 +371,23 @@ footer {
     box-shadow: 0px 0px 30px rgba(221, 221, 211, 0.3);
 }
 
+.card-imagen {
+    height: 250px;
+}
+
 .card-contenido {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 15px;
+}
+
+
+/* Tamaño Pequeño - Celulares */
+
+@media screen and (max-width: 576px) {
+    .card-imagen {
+        height: 250px;
+    }
 }
 
 .nav {
@@ -489,8 +502,10 @@ footer {
         overflow-y: auto;
         left: 100%;
         transition: left 0.3s;
+        display: none;
     }
     .nav-menu_visible {
+        display: flex;
         left: 0;
     }
     .nav-item {

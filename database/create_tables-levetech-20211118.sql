@@ -35,12 +35,12 @@ create table DOMICILIO(
 
 create table PRODUCTO (
     claveProducto int not null  AUTO_INCREMENT,
-    precio int,
-    precioOferta int,
-    descripcion varchar(50),
-    descripcionDetallada varchar(200),
+    precio float,
+    precioOferta float,
+    nombre varchar(50),
+    descripcion varchar(200),
     stock int,
-    puntuacion int,
+    puntuacion float,
     imagen varchar(50),
     claveCategoria int not null,
 
@@ -51,7 +51,7 @@ create table PRODUCTO (
 create table ORDEN (
     claveOrden int not null AUTO_INCREMENT,
     fechaCompra datetime,
-    montoTotal int,
+    montoTotal float,
     iva int,
     claveEnvio int not null,
     claveCliente int not null,
@@ -84,15 +84,6 @@ create table PAGO (
 
 );
 
-create table CARRITO (
-    claveCarrito int not null AUTO_INCREMENT,
-    cantidad int,
-    claveProducto int not null,
-    claveCliente int not null,
-
-    primary key (claveCarrito)
-
-);
 
 create table DETALLE_ORDEN(
     claveDetalleOrden int not null AUTO_INCREMENT,
@@ -111,10 +102,6 @@ add foreign key (claveCliente) references CLIENTE(claveCliente);
 
 alter table  PRODUCTO
 add foreign key (claveCategoria) references CATEGORIA (claveCategoria);
-
-alter table CARRITO
-add foreign key (claveProducto) references PRODUCTO (claveProducto),
-add foreign key (claveCliente) references CLIENTE (claveCliente);
 
 alter table DETALLE_ORDEN
 add foreign key (claveOrden) references ORDEN (claveOrden),

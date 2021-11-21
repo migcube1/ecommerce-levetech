@@ -18,7 +18,7 @@
     <title>Levetech Shop</title>
 
     <!-- ICONS-->
-    <link rel="shorcut icon" href="assets/img/logotipos/iconLevetech.png" type="image/x-icon">
+    <link rel="shorcut icon" href="assets/img/logotipos/levetech-logo-blanco.png" type="image/x-icon">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CSS -->

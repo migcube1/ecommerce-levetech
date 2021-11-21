@@ -401,9 +401,17 @@ footer {
 }
 
 .nav-logo {
+    display: flex;
     font-size: 30px;
     font-weight: bold;
     margin-left: 40px;
+    line-height: 80px;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: 50px;
     line-height: 80px;
 }
 

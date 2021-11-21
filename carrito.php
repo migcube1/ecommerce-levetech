@@ -18,6 +18,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/carrito.css">
 
 </head>
 
@@ -26,23 +27,27 @@
     <?php include("templates/header.php")?>
 
     <h2>Contenido del carrito</h2>
-    <table>
+    <table class="basket r-2">
         <thead>
-            <tr>
-                <td>PRODUCTO</td>
-                <td>PRECIO</td>
-                <td>CANTIDAD</td>
+            <tr class="head_Basket">
+                <th>PRODUCTO</th>
+                <th></th>
+                <th>PRECIO</th>
+                <th>CANTIDAD</th>
             </tr>
         </thead>
 
         <?php if (isset($_SESSION['CARRITO'])){
             foreach($_SESSION['CARRITO'] as $producto): ?>
 
-        <tbody>
+        <tbody class="content_Basket">
             <tr>
-                <td><?= $producto['nombre']?></td>
-                <td><?= '$ '.$producto['precio']?></td>
-                <td><?= $producto['cantidad']?></td>
+                <td class="img_Producto r-1">
+                    <img class="" src="assets/img/productos/<?= $producto['imagen']?>" alt="<?= $producto['nombre'] ?>">
+                </td>
+                <td class="descripcion_Producto r-1"><?= $producto['nombre']?></td>
+                <td class="precio_Producto r-1"><?= '$ '.$producto['precio']?></td>
+                <td class="num_Producto r-1" ><?= $producto['cantidad']?></td>
             </tr>
         </tbody>
 

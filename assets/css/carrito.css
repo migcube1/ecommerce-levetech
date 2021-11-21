@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('normalize.css');
+@import url('estilos.css');
+
+
+/* ====================
+	* LISTA CARRITO *
+==================== */
+.basket {
+    width: 75%;
+    margin: auto;
+}
+
+.head_Basket th {
+    border: 1px solid black;
+}
+
+.img_Producto {
+    width: 20%;
+    height: 200px;
+}
+
+.img_Producto img{
+    width: 100%;
+    height: 100%;
+}
+
+.num_Producto,
+.precio_Producto{
+    text-align: center;
+}

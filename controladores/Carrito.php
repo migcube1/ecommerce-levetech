@@ -14,6 +14,7 @@ if (isset($_POST['btnAccion'])){
             $nombre = openssl_decrypt($_POST['nombre'],METHOD,KEY);
             $precio = openssl_decrypt($_POST['precio'],METHOD,KEY);
             $cantidad = openssl_decrypt($_POST['cantidad'],METHOD,KEY);
+            $imagen = openssl_decrypt($_POST['imagen'],METHOD,KEY);
 
             if (is_numeric($claveProducto) && is_string($nombre) && is_numeric($precio) && is_numeric($cantidad)){
                 
@@ -23,7 +24,8 @@ if (isset($_POST['btnAccion'])){
                         'claveProducto' => $claveProducto,
                         'nombre' => $nombre,
                         'precio' => $precio,
-                        'cantidad' => $cantidad
+                        'cantidad' => $cantidad,
+                        'imagen' => $imagen
                     );
   
                     $_SESSION['CARRITO'][0] = $datos;       //Agregamos un primer producto
@@ -35,7 +37,8 @@ if (isset($_POST['btnAccion'])){
                         'claveProducto' => $claveProducto,
                         'nombre' => $nombre,
                         'precio' => $precio,
-                        'cantidad' => $cantidad
+                        'cantidad' => $cantidad,
+                        'imagen' => $imagen
                     );
     
                     $_SESSION['CARRITO'][$numProductos] = $datos;   //Agregamos un producto al carrito

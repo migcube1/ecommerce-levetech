@@ -81,6 +81,8 @@
                         <input type="hidden" name="nombre" id="nombre" value="<?= openssl_encrypt($producto['descripcion'],METHOD,KEY)?>" class="d-none">
                         <input type="hidden" name="precio" id="precio" value="<?= openssl_encrypt($producto['precio'],METHOD,KEY) ?>"  class="d-none">
                         <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1,METHOD,KEY)?>" class="d-none">
+                        <input type="hidden" name="imagen" id="imagen" value="<?= openssl_encrypt($producto['imagen'],METHOD,KEY) ?>"  class="d-none">
+                        
                         <button type="submit"  name="btnAccion" value="Agregar" class="boton boton-azul ">
                             <i class='bx bxs-cart-add md-1' ></i>Añadir
                         </button>

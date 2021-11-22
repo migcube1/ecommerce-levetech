@@ -28,16 +28,28 @@
 
     <h2>Contenido del carrito</h2>
     <table class="basket r-2">
-        <thead>
+        <thead class="bg-rojo">
             <tr class="head_Basket">
-                <th>PRODUCTO</th>
-                <th></th>
-                <th>PRECIO</th>
-                <th>CANTIDAD</th>
+                <th class="texto-centrado">PRODUCTO</th>
+                <th class="texto-centrado">DESCRIPCIÓN</th>
+                <th class="texto-centrado">PRECIO</th>
+                <th class="texto-centrado">CANTIDAD</th>
+                <th class="texto-centrado">TOTAL</th>
+                <th class="texto-centrado">ACCIONES</th>
             </tr>
         </thead>
 
+        <?php if ($mensaje!=""): ?>
+
+        <div class="contenedor bg-verde">
+            <h1><?= $mensaje ?></h1>
+        </div>
+
+        <?php endif; ?>
+
+
         <?php if (isset($_SESSION['CARRITO'])){
+            $total = 0;
             foreach($_SESSION['CARRITO'] as $producto): ?>
 
         <tbody class="content_Basket">
@@ -46,15 +58,38 @@
                     <img class="" src="assets/img/productos/<?= $producto['imagen']?>" alt="<?= $producto['nombre'] ?>">
                 </td>
                 <td class="descripcion_Producto r-1"><?= $producto['nombre']?></td>
-                <td class="precio_Producto r-1"><?= '$ '.$producto['precio']?></td>
-                <td class="num_Producto r-1" ><?= $producto['cantidad']?></td>
+                <td class="precio_Producto r-1"> $ <?= number_format($producto['precio'])?></td>
+                <td class="num_Producto r-1"><?= $producto['cantidad']?></td>
+                <td class="num_Producto r-1"> $ <?= number_format($producto['cantidad'] * $producto['precio'],2)?></td>
+                <td class="num_Producto r-1">
+                    <form action="" method="post">
+                        <input type="hidden" name="claveProducto" id="claveProducto"
+                            value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>" class="d-none">
+                        <button type="submit" name="btnAccion" value="Eliminar" class="boton boton-rojo">
+                            <i class='bx bxs-trash-alt'></i> Eliminar
+                        </button>
+                    </form>
+                </td>
             </tr>
         </tbody>
 
-        <?php endforeach; }?>
+        
+        <?php 
+            $total+= $producto['cantidad'] * $producto['precio'];
+            endforeach; }
+        ?>
+
+        <tfoot>
+            <tr>
+                <td>Total a pagar: </td>
+                <td> $ <?= number_format($total,2) ?></td>
+            </tr>
+        </tfoot>
+
+
     </table>
 
-    
+
     <!--footer-->
     <?php include("templates/footer.php")?>
 

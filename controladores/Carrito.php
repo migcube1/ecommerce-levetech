@@ -2,7 +2,6 @@
 session_start();
 
 $mensaje ="";
-$numProductos = 0;
 
 if (isset($_POST['btnAccion'])){
 
@@ -16,7 +15,7 @@ if (isset($_POST['btnAccion'])){
             $cantidad = openssl_decrypt($_POST['cantidad'],METHOD,KEY);
             $imagen = openssl_decrypt($_POST['imagen'],METHOD,KEY);
 
-            if (is_numeric($claveProducto) && is_string($nombre) && is_numeric($precio) && is_numeric($cantidad)){
+            if (is_numeric($claveProducto) && is_string($nombre) && is_numeric($precio) && is_numeric($cantidad) && is_string($imagen)){
                 
                 if(!isset($_SESSION['CARRITO'])){  //Si no tiene productos nuestro carrito 
 

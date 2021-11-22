@@ -20,7 +20,9 @@
             </li>
 
             <li class="nav-item ">
-                <a href="carrito.php" class="nav-menu-enlace ">Carrito (<?= $numProductos ?>)</a>
+                <a href="carrito.php" class="nav-menu-enlace ">
+                    Carrito (<?= empty($_SESSION['CARRITO'])?0:count($_SESSION['CARRITO']) ?>)
+                </a>
             </li>
             
         </ul>

@@ -57,9 +57,13 @@
         </div>
     </div>
 
+    <?php if ($mensaje!=""): ?> 
+
     <div class="contenedor bg-verde">
         <h1><?= $mensaje ?></h1>
     </div>
+
+    <?php endif; ?>
 
     <!-- contenedor Productos-->
     <div class="contenedor-ancho ">

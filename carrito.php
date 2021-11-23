@@ -100,13 +100,10 @@
         </a>
         <?php if (!empty($_SESSION['CARRITO'])): ?>
         <a type="submit" class="boton boton-azul" name="btnAccion" value="Comprar" href="pago.php">
-            <i class='bx bxl-paypal md-1'></i>Proceder a comprar
+            <i class='bx bxs-cart-alt md-1'></i>Comprar carrito
         </a>
         <?php endif; ?>
     </div>
-
-
-
 
     <!--footer-->
     <?php include("templates/footer.php")?>

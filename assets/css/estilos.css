@@ -352,6 +352,42 @@ footer {
     .peq-col-12 {
         grid-template-columns: repeat(12, 1fr);
     }
+    .peq-span-1 {
+        grid-column: span 1;
+    }
+    .peq-span-2 {
+        grid-column: span 2;
+    }
+    .peq-span-3 {
+        grid-column: span 3;
+    }
+    .peq-span-4 {
+        grid-column: span 4;
+    }
+    .peq-span-5 {
+        grid-column: span 5;
+    }
+    .peq-span-6 {
+        grid-column: span 6;
+    }
+    .peq-span-7 {
+        grid-column: span 7;
+    }
+    .peq-span-8 {
+        grid-column: span 8;
+    }
+    .peq-span-9 {
+        grid-column: span 9;
+    }
+    .peq-span-10 {
+        grid-column: span 10;
+    }
+    .peq-span-11 {
+        grid-column: span 11;
+    }
+    .peq-span-12 {
+        grid-column: span 12;
+    }
     .slider img {
         max-height: 210px;
     }
@@ -578,20 +614,37 @@ h6 {
 	* FORMULARIOS *
 ==================== */
 
-form {
+.form {
     font-family: var(--fuente);
 }
 
-form .input {
-    padding: 10px 15px;
+.form-label {
+    width: 100%;
+}
+
+.form-input {
+    padding: 7px 7px;
     border-radius: 3px;
     border: 1px solid #d6d6d6;
     transition: .3s ease all;
     width: 100%;
-    margin-bottom: 20px;
 }
 
-form .input:focus {
+.form-input:focus {
+    border: 1px solid var(--color-azul);
+    outline: none;
+}
+
+.form-select {
+    background: var(--color-blanco);
+    width: 100%;
+    padding: 7px 7px;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-select:focus {
     border: 1px solid var(--color-azul);
     outline: none;
 }

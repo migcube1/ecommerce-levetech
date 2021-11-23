@@ -109,16 +109,32 @@
                 <p>¡En Levetech encuentras sólo las mejores marcas!</p>
             </div>
             <div class="grid col-4 med-col-3 peq-col-2 span-1 med-span-2">
-                <a href="#"><img src="assets/img/marcas/asus.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/amd.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/acer.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/lenovo.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/gigabyte.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/msi.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/logitech.webp" alt=""></a>
-                <a href="#"><img src="assets/img/marcas/kingston.webp" alt=""></a>
-                <a href="#" class="d-peq-none d-med-block d-none">
-                    <img src="assets/img/marcas/westerndigital.webp" alt="">
+                <a href="https://www.asus.com/mx/" target="_blank">
+                    <img src="assets/img/marcas/asus.webp" alt="icono_asus">
+                </a>
+                <a href="https://www.amd.com/es" target="_blank">
+                    <img src="assets/img/marcas/amd.webp" alt="Icono_amd">
+                </a>
+                <a href="https://www.acer.com/ac/es/MX/content/home" target="_blank">
+                    <img src="assets/img/marcas/acer.webp" alt="icono_acer">
+                </a>
+                <a href="https://www.lenovo.com/mx/es/" target="_blank">
+                    <img src="assets/img/marcas/lenovo.webp" alt="icono_lenovo">
+                </a>
+                <a href="https://www.gigabyte.com/mx" target="_blank">
+                    <img src="assets/img/marcas/gigabyte.webp" alt="icono_gigabyte">
+                </a>
+                <a href="https://mx.msi.com/" target="_blank">
+                    <img src="assets/img/marcas/msi.webp" alt="icono_msi">
+                </a>
+                <a href="https://www.logitech.com/es-mx" target="_blank">
+                    <img src="assets/img/marcas/logitech.webp" alt="icono_logitech">
+                </a>
+                <a href="https://www.kingston.com/latam" target="_blank">
+                    <img src="assets/img/marcas/kingston.webp" alt="icono_kingston">
+                </a>
+                <a href="https://www.westerndigital.com/" target="_blank" class="d-peq-none d-med-block d-none">
+                    <img src="assets/img/marcas/westerndigital.webp" alt="icono_westerndigital">
                 </a>
             </div>
         </div>

@@ -439,7 +439,7 @@ footer {
     font-size: 18px;
     margin: 0 10px;
     line-height: 80px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     width: max-content;
 }
 
@@ -461,21 +461,6 @@ footer {
     padding: 0 20px;
     line-height: 60px;
     display: none;
-}
-
-.banner {
-    background-size: cover;
-    background-position: center;
-    background-image: url('../img/acerca/banner-ecommerce.jpg');
-}
-
-.banner-imagen {
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    line-height: 300px;
 }
 
 
@@ -526,6 +511,36 @@ footer {
     .nav-menu-enlace:hover {
         background: none;
         color: var(--color-azul);
+    }
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/acerca/banner-ecommerce.jpg');
+}
+
+.banner-imagen {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    line-height: 300px;
+}
+
+.video {
+    width: 600px;
+    height: 400px;
+}
+
+
+/* Tamaño Pequeño - Celulares */
+
+@media screen and (max-width: 576px) {
+    .video {
+        width: 400px;
+        height: 300px;
     }
 }
 

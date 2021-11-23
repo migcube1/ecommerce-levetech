@@ -57,6 +57,14 @@
         </div>
     </div>
 
+
+    <!-- Video-->
+    <div class="contenedor texto-centrado justificar-contenido-centrado alieacion-centrado">
+        <p>Manteniendo siempre los mejores productos y precios del mercado</p>
+        <video class="video" controls>
+            <source src="assets/video/promo.mp4" type="video/mp4">
+    </div>
+
     <!--footer-->
     <?php include("templates/footer.php")?>
 

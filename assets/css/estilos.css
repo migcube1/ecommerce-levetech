@@ -606,6 +606,7 @@ form .input:focus {
     text-align: center;
     line-height: 22px;
     transition: .3s ease all;
+    text-decoration: none;
 }
 
 .boton-azul {
@@ -1322,7 +1323,7 @@ form .input:focus {
 .dots {
     position: absolute;
     bottom: 2px;
-    width: 100%;
+    width: 90%;
     height: 30px;
     display: flex;
     justify-content: center;

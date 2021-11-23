@@ -83,7 +83,7 @@
                     <form action="" method="post">
                         <input type="hidden" name="claveProducto" id="claveProducto" value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>"  class="d-none">
                         <input type="hidden" name="nombre" id="nombre" value="<?= openssl_encrypt($producto['descripcion'],METHOD,KEY)?>" class="d-none">
-                        <input type="hidden" name="precio" id="precio" value="<?= openssl_encrypt($producto['precio'],METHOD,KEY) ?>"  class="d-none">
+                        <input type="hidden" name="precio" id="precio" value="<?= openssl_encrypt($producto['precioOferta'],METHOD,KEY) ?>"  class="d-none">
                         <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1,METHOD,KEY)?>" class="d-none">
                         <input type="hidden" name="imagen" id="imagen" value="<?= openssl_encrypt($producto['imagen'],METHOD,KEY) ?>"  class="d-none">
                         

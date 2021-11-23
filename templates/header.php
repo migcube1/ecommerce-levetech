@@ -12,9 +12,9 @@
             <li class="nav-item ">
                 <a href="index.php" class="nav-menu-enlace ">Inicio</a>
             </li>
-            <li class="nav-item ">
+            <!-- <li class="nav-item ">
                 <a href="# " class="nav-menu-enlace ">Categorias</a>
-            </li>
+            </li> -->
             <li class="nav-item ">
                 <a href="acerca.php" class="nav-menu-enlace ">Acerca de</a>
             </li>

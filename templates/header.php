@@ -2,7 +2,7 @@
     <nav class="nav ">
         <a href="index.php" class="nav-logo nav-enlace">
             <img src="assets/img/logotipos/levetech-icon-azul.png " alt="icono levetech" class="md-1"> 
-            Levetech
+            Levetech Shop
         </a>
         <button type="button" class=" nav-toggle ">
             <i class='bx bx-menu'></i>

@@ -99,9 +99,9 @@
             <i class='bx bx-undo md-1'></i> Regresar
         </a>
         <?php if (!empty($_SESSION['CARRITO'])): ?>
-        <button type="submit" class="boton boton-azul" name="btnAccion" value="Comprar">
+        <a type="submit" class="boton boton-azul" name="btnAccion" value="Comprar" href="pago.php">
             <i class='bx bxl-paypal md-1'></i>Proceder a comprar
-        </button>
+        </a>
         <?php endif; ?>
     </div>
 

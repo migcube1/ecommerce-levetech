@@ -578,7 +578,7 @@ h6 {
 	* FORMULARIOS *
 ==================== */
 
-form * {
+form {
     font-family: var(--fuente);
 }
 

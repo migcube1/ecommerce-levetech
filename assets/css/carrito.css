@@ -25,7 +25,6 @@
     height: 100%;
 }
 
-.num_Producto,
-.precio_Producto {
-    text-align: center;
+.monto_final {
+    border-radius: 3px;
 }

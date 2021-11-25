@@ -1,3 +1,7 @@
+<?php
+    include('controladores/carrito.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

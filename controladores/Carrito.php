@@ -83,9 +83,20 @@ if (isset($_POST['btnAccion'])){
             }else{
                 $mensaje = "Ocurrió un error al eliminar el producto, intenteló más tarde.";
             }
+            break;
+
+        case 'Pagar':  //Manda formulario de compra
+            $name_cliente = $_POST['name'];    
+            $mensaje = "Se mandaron los datos.";
+            var_dump ($name_cliente);
+            echo $name_cliente;
+
+            // }else{
+            //     $mensaje = "Ocurrió un error al mandar el formulario, intenteló más tarde.";
+            // }
 
             // Header("Location: carrito.php");
-            break;
+            // break;
     }
 
 }

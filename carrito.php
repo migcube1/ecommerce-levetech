@@ -53,7 +53,7 @@
             <?php if (isset($_SESSION['CARRITO'])){
             foreach($_SESSION['CARRITO'] as $producto): ?>
 
-            <tbody class="content_Basket">
+            <tbody>
                 <tr>
                     <td class="img_Producto r-1">
                         <img class="" src="assets/img/productos/<?= $producto['imagen']?>"
@@ -84,16 +84,21 @@
 
             <tfoot>
                 <tr>
-                    <td>Total a pagar: </td>
-                    <td> $ <?= number_format($total,2) ?></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="ry-2 texto-centrado bg-gris">Total a pagar: </td>
+                    <td class="ry-2 texto-centrado bg-gris"> 
+                        <b> $ <?= number_format($total,2) ?> </b>
+                    </td>
                 </tr>
             </tfoot>
         </table>
     </div>
 
 
-
-
+    
     <div class="contenedor d-flex justificar-contenido-final">
         <a type="button" class="boton boton-verde md-1" href="index.php">
             <i class='bx bx-undo md-1'></i> Regresar

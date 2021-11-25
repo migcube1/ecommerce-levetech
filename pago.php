@@ -1,6 +1,7 @@
 <?php
     include('config/config.php');
-    include('controladores/carrito.php');
+    include('controladores/carrito.php');    
+    #include('controladores/Carrito.php');
 
 ?>
 
@@ -41,13 +42,12 @@
                     <div class="grid col-2 ms-2">
                         <div class="span-2">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" name="nombre" placeholder="Nombre del cliente" class="form-input">
+                            <input type="text" name="name" placeholder="Nombre del cliente" class="form-input">
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="apaterno" class="form-label">Apellido Paterno<label>
-                                    <input type="text" name="apaterno" placeholder="Apellido Paterno"
-                                        class="form-input">
+                                    <input type="text" name="apaterno" placeholder="Apellido Paterno" class="form-input">
                         </div>
 
                         <div class="span-1 med-span-2">
@@ -166,9 +166,41 @@
                     <i class='bx bx-undo md-1'></i> Regresar
                 </a>
                 <?php if (!empty($_SESSION['CARRITO'])): ?>
-                <a type="submit" class="boton boton-azul" name="btnAccion" value="Pagar" href="informe.php">
+
+                <button type="submit" class="boton boton-azul" name="btnAccion" value="Pagar" formaction="#info-compra">
                     <i class='bx bxl-paypal md-1'></i>Pagar
-                </a>
+                </button>
+
+                <div id="info-compra" class="compra">
+                    <div class="compra-contenido bg-azul texto-blanco rx-2 ry-1">
+                        <a href="#" class="bg-blanco">X</a>
+                        <h2 class="r-1  mi-1 boton-rojo">Informe de envio</h2>
+                        <table class="bg-blanco texto-negro info-table">
+                            <tbody>
+                                <tr>
+                                    <td class="num-fila-compra rl-1">Cliente</td>
+                                    <td style="border-right:2px solid #000;"></td>
+                                    <td class="rl-1">hello</td>
+                                </tr>
+                                <tr>
+                                    <td class="num-fila-compra rl-1" >Dirección</td>
+                                    <td style="border-right:2px solid #000;"></td>
+                                    <td class="rl-1">hello</td>
+                                </tr>
+                                <tr>
+                                    <td class="num-fila-compra rl-1" >Paqueteria</td>
+                                    <td style="border-right:2px solid #000;"></td>
+                                    <td class="rl-1">hello</td>
+                                </tr>
+                                <tr>
+                                    <td class="num-fila-compra rl-1" >Monto total</td>
+                                    <td style="border-right:2px solid #000;"></td>
+                                    <td class="rl-1">hello</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>  
+                </div>
                 <?php endif; ?>
             </div>
         </form>

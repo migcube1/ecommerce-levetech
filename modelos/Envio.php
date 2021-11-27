@@ -2,7 +2,7 @@
 
 require_once ('config/Conexion.php');
 
-class Producto {
+class Envio {
 
     /** Conexión a la base de datos */
     private $conexion;
@@ -14,11 +14,11 @@ class Producto {
         $this->conexion = new Conexion();
     }
 
-    public function obtenerProductos(){
-        
+    public function obtenerEnvios(){
+
         try {
             $connection = $this->conexion->conectar();      //Realizamos conexión
-            $query = 'SELECT * FROM producto';              //Consulta
+            $query = 'SELECT * FROM envio';                  //Consulta
             $statement = $connection->prepare($query);     //Preparamos la consulta
             $statement->execute();                          //Ejecutamos la consulta
             $datos = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -27,6 +27,8 @@ class Producto {
         }
 
         return $datos;
+
     }
 
+    
 }

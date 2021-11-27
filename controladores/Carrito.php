@@ -86,17 +86,79 @@ if (isset($_POST['btnAccion'])){
             break;
 
         case 'Pagar':  //Manda formulario de compra
-            $name_cliente = $_POST['name'];    
-            $mensaje = "Se mandaron los datos.";
-            var_dump ($name_cliente);
-            echo $name_cliente;
 
-            // }else{
-            //     $mensaje = "Ocurrió un error al mandar el formulario, intenteló más tarde.";
-            // }
+            // Información del cliente
+            $nombre = $_POST['nombre'];
+            $apaterno = $_POST['apaterno'];
+            $amaterno = $_POST['amaterno']; 
+            $correo = $_POST['correo'];
+            $telefono = $_POST['telefono'];
+            
+            //Datos del domicilio
+            $calle = $_POST['calle']; 
+            $numero = $_POST['numero']; 
+            $cp = $_POST['cp']; 
+            $colonia = $_POST['colonia'];
+            $alcaldia = $_POST['alcaldia']; 
+            $estado = $_POST['estado']; 
 
-            // Header("Location: carrito.php");
-            // break;
-    }
+            //Información de envio
+            $envio = $_POST['envio']; 
+
+            //Información de pago
+            $numero_tarjeta = $_POST['numero_tarjeta']; 
+            $vencimiento = $_POST['vencimiento']; 
+            $codigo_seguridad = $_POST['codigo_seguridad']; 
+
+            echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
+
+            //Validamos los datos 
+            if (is_string($nombre) && is_string($apaterno) && is_string($amaterno) && is_string($correo) && is_string($telefono) && is_string($calle) && is_string($numero) && is_numeric($cp) && is_string($colonia) && is_string($alcaldia) && is_string($estado) &&is_string($envio) && is_string($numero_tarjeta) && is_string($vencimiento) && is_numeric($codigo_seguridad)){
+
+                
+                $OrdenModelo = new Orden();
+
+                $datosOrden = array(
+                    'nombre' => $nombre,
+                    'apaterno' => $apaterno,
+                    'amaterno' => $amaterno,
+                    'correo' => $correo,
+                    'telefono' => $telefono,
+
+                    'calle' => $calle,
+                    'numero' => $numero, 
+                    'cp' => $cp, 
+                    'colonia' => $colonia,
+                    'alcaldia' => $alcaldia, 
+                    'estado' => $estado,
+
+                    'claveEnvio' => $envio,
+
+                    'numeroTarjeta' => $numero_tarjeta,
+                    'vencimiento' => $vencimiento,
+                    'codigoSeguridad' => $codigo_seguridad,
+
+                    'montoTotal' => 200,
+                    'codigoEnvio' => 1
+
+                );
+               
+
+                if ($OrdenModelo->realizarOrden($datosOrden)){
+                    echo "Se realizó correctamente el pago.";
+                    // session_destroy();
+                    // Header ("Location: index.php");
+                }else{
+                    echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
+                }
+
+            }else{
+
+                echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
+            }
+
+            break;         
+            
+     }
 
 }

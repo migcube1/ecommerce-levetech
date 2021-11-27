@@ -1,6 +1,7 @@
 <?php
     include('config/config.php');
     include('controladores/Carrito.php');
+
     $total = 0;
 ?>
 
@@ -18,8 +19,9 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/estilos.css">
     <link rel="stylesheet" href="assets/css/carrito.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
 
 </head>
 
@@ -89,7 +91,7 @@
                     <td></td>
                     <td></td>
                     <td class="ry-2 texto-centrado bg-gris">Total a pagar: </td>
-                    <td class="ry-2 texto-centrado bg-gris"> 
+                    <td class="ry-2 texto-centrado bg-gris">
                         <b> $ <?= number_format($total,2) ?> </b>
                     </td>
                 </tr>
@@ -98,7 +100,7 @@
     </div>
 
 
-    
+
     <div class="contenedor d-flex justificar-contenido-final">
         <a type="button" class="boton boton-verde md-1" href="index.php">
             <i class='bx bx-undo md-1'></i> Regresar

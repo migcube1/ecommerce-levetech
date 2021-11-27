@@ -13,10 +13,8 @@ create table CLIENTE(
     nombre varchar(100),
     apaterno varchar(100),
     amaterno varchar(100),
-    usuario varchar(100),
     email varchar(50),
     telefono varchar(15),
-    contrasenia varchar (200),
 
     primary key (claveCliente)
 
@@ -26,8 +24,10 @@ create table DOMICILIO(
     claveDomicilio int not null AUTO_INCREMENT,
     calle varchar(100),
     numero int,
+    cp int,
     colonia varchar(100),
     alcaldia varchar(100),
+    estado varchar(100),
     claveCliente int not null,
 
     primary key (claveDomicilio)
@@ -42,7 +42,6 @@ create table PRODUCTO (
     stock int,
     puntuacion float,
     imagen varchar(50),
-    claveCategoria int not null,
 
     primary key (claveProducto)
     
@@ -50,49 +49,37 @@ create table PRODUCTO (
 
 create table ORDEN (
     claveOrden int not null AUTO_INCREMENT,
-    fechaCompra datetime,
+    fechaCompra varchar(50),
     montoTotal float,
-    iva int,
+    numeroTarjeta varchar(200),
+    vecimiento varchar(200),
+    codigoSeguridad varchar(200),
     claveEnvio int not null,
     claveCliente int not null,
-    clavePago int not null,
     claveDomicilio int not null,
 
     primary key (claveOrden)
 
 );
 
-create table CATEGORIA (
-    claveCategoria int not null AUTO_INCREMENT,
-    descripcion varchar(50),
-
-    primary key (claveCategoria)
-);
-
 create table ENVIO (
     claveEnvio int  not null AUTO_INCREMENT,
     medioEnvio varchar(50),
+    costoEnvio float,
 
     primary key (claveEnvio)
 );
 
-create table PAGO (
-    clavePago int not null AUTO_INCREMENT,
-    nombre varchar(50),
-
-    primary key (clavePago)
-
-);
 
 
-create table DETALLE_ORDEN(
-    claveDetalleOrden int not null AUTO_INCREMENT,
-    cantidad int,
-    claveOrden int not null,
-    claveProducto int not null,
+-- create table DETALLE_ORDEN(
+--     claveDetalleOrden int not null AUTO_INCREMENT,
+--     cantidad int,
+--     claveOrden int not null,
+--     claveProducto int not null,
 
-    primary key (claveDetalleOrden)
-);
+--     primary key (claveDetalleOrden)
+-- );
 
 
 /** Relaciones de tablas */
@@ -100,16 +87,12 @@ create table DETALLE_ORDEN(
 alter table DOMICILIO
 add foreign key (claveCliente) references CLIENTE(claveCliente);
 
-alter table  PRODUCTO
-add foreign key (claveCategoria) references CATEGORIA (claveCategoria);
-
-alter table DETALLE_ORDEN
-add foreign key (claveOrden) references ORDEN (claveOrden),
-add foreign key (claveProducto) references PRODUCTO (claveProducto);
+-- alter table DETALLE_ORDEN
+-- add foreign key (claveOrden) references ORDEN (claveOrden),
+-- add foreign key (claveProducto) references PRODUCTO (claveProducto);
 
 alter table ORDEN
 add foreign key (claveEnvio) references ENVIO (claveEnvio),
-add foreign key (clavePago) references PAGO (clavePago),
 add foreign key (claveDomicilio) references DOMICILIO(claveDomicilio),
 add foreign key (claveCliente) references CLIENTE(claveCliente);
 

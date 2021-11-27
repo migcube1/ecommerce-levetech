@@ -1,7 +1,7 @@
 <?php
     include('config/config.php');
-    include('controladores/carrito.php');
     include('modelos/Producto.php');
+    include('controladores/carrito.php');
 
     $ProductoModelo = new Producto();
     $productos = $ProductoModelo ->obtenerProductos();
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <?php if ($mensaje!=""): ?> 
+    <?php if ($mensaje!=""): ?>
 
     <div class="contenedor bg-verde">
         <h1><?= $mensaje ?></h1>
@@ -72,26 +72,32 @@
             <?php foreach($productos as $producto): ?>
 
             <div class="card ">
-                <img class="card-imagen" src="assets/img/productos/<?= $producto['imagen']?>" alt="<?= $producto['nombre'] ?>">
+                <img class="card-imagen" src="assets/img/productos/<?= $producto['imagen']?>"
+                    alt="<?= $producto['nombre'] ?>">
                 <div class="card-contenido ">
                     <p> <?= $producto['descripcion'] ?></p>
                     <h3 class="mi-1 ">$ <?= number_format($producto['precioOferta'],2) ?></h3>
                     <h5 class="mi-0 texto-gris ">Antes: $ <?= number_format($producto['precio'],2)?></h5>
-                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.00</h5>
+                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.99</h5>
                     <h5 class="mi-0 texto-gris ">Disponibles: <?= $producto['stock']?> pz</h5>
                     <h5 class="mi-1 texto-gris ">Puntuación: <?= $producto['puntuacion']?></h5>
                     <form action="" method="post">
-                        <input type="hidden" name="claveProducto" id="claveProducto" value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>"  class="d-none">
-                        <input type="hidden" name="nombre" id="nombre" value="<?= openssl_encrypt($producto['descripcion'],METHOD,KEY)?>" class="d-none">
-                        <input type="hidden" name="precio" id="precio" value="<?= openssl_encrypt($producto['precioOferta'],METHOD,KEY) ?>"  class="d-none">
-                        <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1,METHOD,KEY)?>" class="d-none">
-                        <input type="hidden" name="imagen" id="imagen" value="<?= openssl_encrypt($producto['imagen'],METHOD,KEY) ?>"  class="d-none">
-                        
-                        <button type="submit"  name="btnAccion" value="Agregar" class="boton boton-azul ">
-                            <i class='bx bxs-cart-add md-1' ></i>Añadir
+                        <input type="hidden" name="claveProducto" id="claveProducto"
+                            value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>" class="d-none">
+                        <input type="hidden" name="nombre" id="nombre"
+                            value="<?= openssl_encrypt($producto['descripcion'],METHOD,KEY)?>" class="d-none">
+                        <input type="hidden" name="precio" id="precio"
+                            value="<?= openssl_encrypt($producto['precioOferta'],METHOD,KEY) ?>" class="d-none">
+                        <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1,METHOD,KEY)?>"
+                            class="d-none">
+                        <input type="hidden" name="imagen" id="imagen"
+                            value="<?= openssl_encrypt($producto['imagen'],METHOD,KEY) ?>" class="d-none">
+
+                        <button type="submit" name="btnAccion" value="Agregar" class="boton boton-azul ">
+                            <i class='bx bxs-cart-add md-1'></i>Añadir
                         </button>
                     </form>
-                    
+
                 </div>
             </div>
 

@@ -39,22 +39,18 @@ class Orden {
             }
             // Agregamos la orden
             if (!empty($claveDomicilio)){  //Si existe el cliente en la BD
-                
-
+            
                 $numeroTarjeta = openssl_encrypt($datos['numeroTarjeta'],METHOD, KEY);
                 $vencimiento = openssl_encrypt($datos['vencimiento'],METHOD, KEY);
                 $codigoSeguridad = openssl_encrypt($datos['codigoSeguridad'],METHOD, KEY);
-                $fechaOrden = date('Y-m-d g:i');
-
-
-                $query = "INSERT INTO orden(fechaCompra, montoTotal, numeroTarjeta,vencimiento,codigoSeguridad,claveEnvio,claveCliente,claveDomicilio) VALUES ('".$fechaOrden."',".$datos['montoTotal'].",'".$numeroTarjeta."','".$vencimiento."','".$codigoSeguridad."',".$datos['claveEnvio'].",".$claveCliente.",".$claveDomicilio.");";
+         
+                $query = "INSERT INTO orden(fechaCompra, montoTotal, numeroTarjeta,vencimiento,codigoSeguridad,claveEnvio,claveCliente,claveDomicilio) VALUES (now(),".$datos['montoTotal'].",'".$numeroTarjeta."','".$vencimiento."','".$codigoSeguridad."',".$datos['claveEnvio'].",".$claveCliente.",".$claveDomicilio.");";
                 $connection->exec($query);  //Ejecutamos la consulta
-
+         
             }else{
                 $connection->rollback();
                 return FALSE;
             }
-
 
             $connection->commit();
             return TRUE;

@@ -52,7 +52,7 @@ create table ORDEN (
     fechaCompra varchar(50),
     montoTotal float,
     numeroTarjeta varchar(200),
-    vecimiento varchar(200),
+    vencimiento varchar(200),
     codigoSeguridad varchar(200),
     claveEnvio int not null,
     claveCliente int not null,

@@ -49,27 +49,27 @@
                     <div class="grid col-2 ms-2">
                         <div class="span-2">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" name="nombre" class="form-input" required>
+                            <input type="text" name="nombre" class="form-input" maxlength="100" equired>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="apaterno" class="form-label">Apellido Paterno<label>
-                                    <input type="text" name="apaterno" class="form-input" required>
+                                    <input type="text" name="apaterno" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="amaterno" class="form-label">Apellido Materno</label>
-                            <input type="text" name="amaterno" class="form-input" required>
+                            <input type="text" name="amaterno" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="correo" class="form-label">Correo Electrónico</label>
-                            <input type="email" name="correo" class="form-input" required>
+                            <input type="email" name="correo" class="form-input" maxlength="50" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="telefono" class="form-label">Teléfono/Celular</label>
-                            <input type="text" name="telefono" class="form-input" required>
+                            <input type="text" name="telefono" class="form-input" maxlength="15" required>
                         </div>
 
                     </div>
@@ -86,32 +86,33 @@
                     <div class="grid col-2 ms-2">
                         <div class="span-2">
                             <label for="calle" class="form-label">Calle</label>
-                            <input type="text" name="calle" class="form-input" required>
+                            <input type="text" name="calle" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="numero" class="form-label">No. exterior</label>
-                            <input type="text" name="numero" class="form-input" required>
+                            <input type="number" name="numero" class="form-input" min="0" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="cp" class="form-label">C.P.</label>
-                            <input type="text" name="cp" class="form-input" required>
+                            <input type="number" name="cp" class="form-input"  required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="colonia" class="form-label">Colonia</label>
-                            <input type="text" name="colonia" class="form-input" required>
+                            <input type="text" name="colonia" class="form-input" maxlength="100"  required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="alcaldia" class="form-label">Municipio/Alcaldia</label>
-                            <input type="text" name="alcaldia" class="form-input" required>
+                            <input type="text" name="alcaldia" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-2">
                             <label for="estado" class="form-label">Estado</label>
-                            <input type="text" name="estado" class="form-input" required>
+                            <input type="text" name="estado" class="form-input"  maxlength="100" required>
+                            z
                         </div>
                     </div>
                 </div>
@@ -155,7 +156,7 @@
                         <div class="span-1 peq-span-3">
                             <label for="numero_tarjeta" class="form-label">Número de tarjeta</label>
                             <input type="text" name="numero_tarjeta" class="form-input"
-                                placeholder="NNNN-NNNN-NNNN-NNNN" maxlength="27" required>
+                                placeholder="NNNN-NNNN-NNNN-NNNN" maxlength="27" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
                         </div>
                         <div class="span-1 peq-span-3">
                             <label for="vencimiento" class="form-label"> Vencimiento</label>
@@ -166,6 +167,17 @@
                         <div class="span-1 peq-span-3">
                             <label for="codigo_seguridad" class="form-label"> Código de Seguridad</label>
                             <input type="text" name="codigo_seguridad" class="form-input" maxlength="3" required>
+                        </div>
+                        
+                        <?php 
+                            $total= 0;
+                            foreach($_SESSION['CARRITO'] as $producto): 
+                                $total+= $producto['cantidad'] * $producto['precio'];
+                            endforeach;
+                        ?>
+                        <div class="span-1 peq-span-3">
+                            <label for="monto" class="form-label"> Monto Total</label>
+                            <input disabled type="text"  name="monto" class="form-input" value="<?= $total ?>">
                         </div>
                     </div>
 
@@ -178,11 +190,20 @@
                 </a>
                 <?php if (!empty($_SESSION['CARRITO'])): ?>
 
-                <button type="submit" class="boton boton-azul" name="btnAccion" value="Pagar" > <!--formaction="#info-compra"-->
+                <button type="submit" class="boton boton-azul" name="btnAccion" value="Pagar">
+                    <!--formaction="#info-compra"-->
                     <i class='bx bxl-paypal md-1'></i>Pagar
                 </button>
 
-                <!-- <div id="info-compra" class="compra">
+     
+                <?php endif; ?>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- vetana modal -->
+    <!-- <div id="info-compra" class="compra">
                     <div class="compra-contenido bg-azul texto-blanco rx-2 ry-1">
                         <a href="#" class="bg-blanco">X</a>
                         <h2 class="r-1  mi-1 boton-rojo">Informe de envio</h2>
@@ -212,10 +233,6 @@
                         </table>
                     </div>
                 </div> -->
-                <?php endif; ?>
-            </div>
-        </form>
-    </div>
 
     <?php else: 
         Header ("Location: index.php");

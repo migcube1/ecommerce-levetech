@@ -52,8 +52,9 @@
             <?php endif; ?>
 
 
-            <?php if (isset($_SESSION['CARRITO'])){
-            foreach($_SESSION['CARRITO'] as $producto): ?>
+            <?php if (isset($_SESSION['CARRITO'])):
+                    foreach($_SESSION['CARRITO'] as $producto): 
+            ?>
 
             <tbody>
                 <tr>
@@ -81,7 +82,8 @@
 
             <?php 
                 $total+= $producto['cantidad'] * $producto['precio'];
-                endforeach; }
+                endforeach; 
+                endif;
             ?>
 
             <tfoot>

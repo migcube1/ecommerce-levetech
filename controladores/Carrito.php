@@ -108,14 +108,12 @@ if (isset($_POST['btnAccion'])){
             //Información de pago
             $numero_tarjeta = $_POST['numero_tarjeta']; 
             $vencimiento = $_POST['vencimiento']; 
-            $codigo_seguridad = $_POST['codigo_seguridad']; 
-
-            echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
+            $codigo_seguridad = $_POST['codigo_seguridad'];
+            $montoTotal = $_POST['monto'];
 
             //Validamos los datos 
             if (is_string($nombre) && is_string($apaterno) && is_string($amaterno) && is_string($correo) && is_string($telefono) && is_string($calle) && is_string($numero) && is_numeric($cp) && is_string($colonia) && is_string($alcaldia) && is_string($estado) &&is_string($envio) && is_string($numero_tarjeta) && is_string($vencimiento) && is_numeric($codigo_seguridad)){
 
-                
                 $OrdenModelo = new Orden();
 
                 $datosOrden = array(
@@ -138,22 +136,20 @@ if (isset($_POST['btnAccion'])){
                     'vencimiento' => $vencimiento,
                     'codigoSeguridad' => $codigo_seguridad,
 
-                    'montoTotal' => 200,
-                    'codigoEnvio' => 1
+                    'montoTotal' => $montoTotal,
+                    'codigoEnvio' => $envio
 
                 );
                
 
-                if ($OrdenModelo->realizarOrden($datosOrden)){
-                    echo "Se realizó correctamente el pago.";
-                    // session_destroy();
-                    // Header ("Location: index.php");
+                if ($OrdenModelo->realizarOrden($datosOrden)){ //Si la orden se realiza
+                    session_destroy();                              //Destuimos el pedido del carrito.
+                    Header ("Location: index.php");                //Redirecionamos a la pagina principal
                 }else{
                     echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
                 }
 
             }else{
-
                 echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
             }
 

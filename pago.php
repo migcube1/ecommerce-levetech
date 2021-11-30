@@ -112,7 +112,6 @@
                         <div class="span-2">
                             <label for="estado" class="form-label">Estado</label>
                             <input type="text" name="estado" class="form-input"  maxlength="100" required>
-                            z
                         </div>
                     </div>
                 </div>
@@ -177,7 +176,7 @@
                         ?>
                         <div class="span-1 peq-span-3">
                             <label for="monto" class="form-label"> Monto Total</label>
-                            <input disabled type="text"  name="monto" class="form-input" value="<?= $total ?>">
+							<input readonly="readonly" type="text"  name="monto" class="form-input" value="<?= $total ?>">
                         </div>
                     </div>
 
@@ -197,7 +196,7 @@
 
      
                 <?php endif; ?>
-            </div>
+            </div>::
         </form>
     </div>
 

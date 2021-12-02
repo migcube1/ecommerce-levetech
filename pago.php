@@ -49,7 +49,7 @@
                     <div class="grid col-2 ms-2">
                         <div class="span-2">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" name="nombre" class="form-input" maxlength="100" equired>
+                            <input type="text" name="nombre" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-1 med-span-2">
@@ -69,7 +69,7 @@
 
                         <div class="span-1 med-span-2">
                             <label for="telefono" class="form-label">Teléfono/Celular</label>
-                            <input type="text" name="telefono" class="form-input" maxlength="15" required>
+                            <input type="text" name="telefono" class="form-input" maxlength="15" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="NN-NNNN-NNNN" required >
                         </div>
 
                     </div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="span-1 peq-span-3">
                             <label for="vencimiento" class="form-label"> Vencimiento</label>
-                            <input type="text" name="vencimiento" class="form-input" placeholder="MM/AA" maxlength="5"
+                            <input type="text" name="vencimiento" class="form-input" placeholder="MM/AA" pattern="[0-9]{2}/[0-9]{2}" maxlength="5"
                                 required>
                         </div>
 
@@ -199,7 +199,7 @@
                     <i class='bx bxl-paypal md-1'></i>Pagar
                 </button>
                 <?php endif; ?>
-            </div>::
+            </div>
         </form>
     </div>
 

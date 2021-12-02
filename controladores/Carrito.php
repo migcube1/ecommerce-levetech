@@ -137,14 +137,15 @@ if (isset($_POST['btnAccion'])){
                     'codigoSeguridad' => $codigo_seguridad,
 
                     'montoTotal' => $montoTotal,
-                    'codigoEnvio' => $envio
+                    'codigoEnvio' => $envio,
+                    'carrito' =>$_SESSION['CARRITO']
 
                 );
                
 
                 if ($OrdenModelo->realizarOrden($datosOrden)){ //Si la orden se realiza
                     session_destroy();                              //Destuimos el pedido del carrito.
-                    Header ("Location: index.php");                //Redirecionamos a la pagina principal
+                    Header ("Location: compra.php");                //Redirecionamos a la pagina principal
                 }else{
                     echo "Ocurrió un error al realizar el pago, intenteló más tarde.";
                 }

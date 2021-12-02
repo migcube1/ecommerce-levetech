@@ -36,6 +36,9 @@ class Orden {
 
                 $claveDomicilio = $connection->lastInsertId(); //Obtenemos la clave del domicilio
 
+            }else{
+                $connection->rollback();
+                return FALSE;
             }
             // Agregamos la orden
             if (!empty($claveDomicilio)){  //Si existe el cliente en la BD
@@ -46,12 +49,27 @@ class Orden {
          
                 $query = "INSERT INTO orden(fechaCompra, montoTotal, numeroTarjeta,vencimiento,codigoSeguridad,claveEnvio,claveCliente,claveDomicilio) VALUES (now(),".$datos['montoTotal'].",'".$numeroTarjeta."','".$vencimiento."','".$codigoSeguridad."',".$datos['claveEnvio'].",".$claveCliente.",".$claveDomicilio.");";
                 $connection->exec($query);  //Ejecutamos la consulta
+
+                $claveOrden = $connection->lastInsertId(); //Obtenemos la clave de la orden
          
             }else{
                 $connection->rollback();
                 return FALSE;
             }
+            
+            //Agregamos el detalle de orden
+            if (!empty($datos['carrito'])){
 
+                foreach ( $datos['carrito'] as $index=>$producto){  //Para cada producto del carrito
+                    $query = "INSERT INTO detalle_orden(cantidad, precioUnitario, claveOrden, claveProducto) VALUES(".$producto['cantidad'].",".$producto['precio'].",".$claveOrden.",".$producto['claveProducto'].");";
+                    
+                    $connection->exec($query);
+                }
+            }else{
+                $connection->rollback();
+                return FALSE;
+            }
+            
             $connection->commit();
             return TRUE;
              

@@ -28,12 +28,15 @@
 
 
     <div class="contenedor">
-
-        <div class="bg-gris">
-            Esto es una compra
+        <div class="bg-gris texto-centrado texto-blanco r-2">
+            <h2 class="r-1">¡Listo!</h2>
+            <hr>
+            <h3 class="r-1">Su compra se realizó con éxito</h3>
+            <a class="boton boton-azul" href="index.php">
+            <i class='bx bx-undo md-1'></i>Regresar
+            </a>
         </div>
     </div>
-
 
     <!--footer-->
     <?php include("templates/footer.php")?>

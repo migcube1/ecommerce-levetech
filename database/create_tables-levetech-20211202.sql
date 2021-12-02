@@ -72,29 +72,30 @@ create table ENVIO (
 
 
 
--- create table DETALLE_ORDEN(
---     claveDetalleOrden int not null AUTO_INCREMENT,
---     cantidad int,
---     claveOrden int not null,
---     claveProducto int not null,
+create table DETALLE_ORDEN(
+  claveDetalleOrden int not null AUTO_INCREMENT,
+  cantidad int,
+  precioUnitario float,
+  claveOrden int not null,
+  claveProducto int not null,
 
---     primary key (claveDetalleOrden)
--- );
+  primary key (claveDetalleOrden)
+);
 
 
 /** Relaciones de tablas */
 
 alter table DOMICILIO
-add foreign key (claveCliente) references CLIENTE(claveCliente);
+add foreign key (claveCliente) references CLIENTE(claveCliente) on delete cascade;
 
--- alter table DETALLE_ORDEN
--- add foreign key (claveOrden) references ORDEN (claveOrden),
--- add foreign key (claveProducto) references PRODUCTO (claveProducto);
+alter table DETALLE_ORDEN
+add foreign key (claveOrden) references ORDEN (claveOrden) on delete cascade,
+add foreign key (claveProducto) references PRODUCTO (claveProducto) on delete cascade;
 
 alter table ORDEN
-add foreign key (claveEnvio) references ENVIO (claveEnvio),
-add foreign key (claveDomicilio) references DOMICILIO(claveDomicilio),
-add foreign key (claveCliente) references CLIENTE(claveCliente);
+add foreign key (claveEnvio) references ENVIO (claveEnvio) on delete cascade,
+add foreign key (claveDomicilio) references DOMICILIO(claveDomicilio) on delete cascade,
+add foreign key (claveCliente) references CLIENTE(claveCliente) on delete cascade;
 
 commit;
 

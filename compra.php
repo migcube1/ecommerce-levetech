@@ -27,6 +27,12 @@
     <?php include("templates/header.php")?>
 
 
+    <div class="contenedor">
+
+        <div class="bg-gris">
+            Esto es una compra
+        </div>
+    </div>
 
 
     <!--footer-->

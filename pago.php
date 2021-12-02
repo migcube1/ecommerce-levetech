@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Levetech Shop</title>
+    <title>Pago | Levetech Shop</title>
 
     <!-- ICONS-->
     <link rel="shorcut icon" href="assets/img/logotipos/levetech-logo-blanco.png" type="image/x-icon">
@@ -96,12 +96,12 @@
 
                         <div class="span-1 med-span-2">
                             <label for="cp" class="form-label">C.P.</label>
-                            <input type="number" name="cp" class="form-input"  required>
+                            <input type="number" name="cp" class="form-input" required>
                         </div>
 
                         <div class="span-1 med-span-2">
                             <label for="colonia" class="form-label">Colonia</label>
-                            <input type="text" name="colonia" class="form-input" maxlength="100"  required>
+                            <input type="text" name="colonia" class="form-input" maxlength="100" required>
                         </div>
 
                         <div class="span-1 med-span-2">
@@ -111,7 +111,7 @@
 
                         <div class="span-2">
                             <label for="estado" class="form-label">Estado</label>
-                            <input type="text" name="estado" class="form-input"  maxlength="100" required>
+                            <input type="text" name="estado" class="form-input" maxlength="100" required>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,8 @@
                         <div class="span-1 peq-span-3">
                             <label for="numero_tarjeta" class="form-label">Número de tarjeta</label>
                             <input type="text" name="numero_tarjeta" class="form-input"
-                                placeholder="NNNN-NNNN-NNNN-NNNN" maxlength="27" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                                placeholder="NNNN-NNNN-NNNN-NNNN" maxlength="27"
+                                pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
                         </div>
                         <div class="span-1 peq-span-3">
                             <label for="vencimiento" class="form-label"> Vencimiento</label>
@@ -167,7 +168,7 @@
                             <label for="codigo_seguridad" class="form-label"> Código de Seguridad</label>
                             <input type="text" name="codigo_seguridad" class="form-input" maxlength="3" required>
                         </div>
-                        
+
                         <?php 
                             $total= 0;
                             foreach($_SESSION['CARRITO'] as $producto): 
@@ -176,7 +177,8 @@
                         ?>
                         <div class="span-1 peq-span-3">
                             <label for="monto" class="form-label"> Monto Total</label>
-							<input readonly="readonly" type="text"  name="monto" class="form-input" value="<?= $total ?>">
+                            <input readonly="readonly" type="text" name="monto" class="form-input"
+                                value="<?= $total ?>">
                         </div>
                     </div>
 
@@ -189,12 +191,13 @@
                 </a>
                 <?php if (!empty($_SESSION['CARRITO'])): ?>
 
+                <a type="button" class="boton boton-gris md-1" formaction="#info-compra">
+                    <i class='bx bxl-paypal md-1'></i>Ver informe
+                </a>
+
                 <button type="submit" class="boton boton-azul" name="btnAccion" value="Pagar">
-                    <!--formaction="#info-compra"-->
                     <i class='bx bxl-paypal md-1'></i>Pagar
                 </button>
-
-     
                 <?php endif; ?>
             </div>::
         </form>
@@ -202,49 +205,44 @@
 
 
     <!-- vetana modal -->
-    <!-- <div id="info-compra" class="compra">
-                    <div class="compra-contenido bg-azul texto-blanco rx-2 ry-1">
-                        <a href="#" class="bg-blanco">X</a>
-                        <h2 class="r-1  mi-1 boton-rojo">Informe de envio</h2>
-                        <table class="bg-blanco texto-negro info-table">
-                            <tbody>
-                                <tr>
-                                    <td class="num-fila-compra rl-1">Cliente</td>
-                                    <td style="border-right:2px solid #000;"></td>
-                                    <td class="rl-1">hello</td>
-                                </tr>
-                                <tr>
-                                    <td class="num-fila-compra rl-1">Dirección</td>
-                                    <td style="border-right:2px solid #000;"></td>
-                                    <td class="rl-1">hello</td>
-                                </tr>
-                                <tr>
-                                    <td class="num-fila-compra rl-1">Paqueteria</td>
-                                    <td style="border-right:2px solid #000;"></td>
-                                    <td class="rl-1">hello</td>
-                                </tr>
-                                <tr>
-                                    <td class="num-fila-compra rl-1">Monto total</td>
-                                    <td style="border-right:2px solid #000;"></td>
-                                    <td class="rl-1">hello</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div> -->
+    <div id="info-compra" class="compra">
+        <div class="compra-contenido bg-azul texto-blanco rx-2 ry-1">
+            <a href="#" class="bg-blanco">X</a>
+            <h2 class="r-1  mi-1 boton-rojo">Informe de envio</h2>
+            <table class="bg-blanco texto-negro info-table">
+                <tbody>
+                    <tr>
+                        <td class="num-fila-compra rl-1">Cliente</td>
+                        <td style="border-right:2px solid #000;"></td>
+                        <td class="rl-1">hello</td>
+                    </tr>
+                    <tr>
+                        <td class="num-fila-compra rl-1">Dirección</td>
+                        <td style="border-right:2px solid #000;"></td>
+                        <td class="rl-1">hello</td>
+                    </tr>
+                    <tr>
+                        <td class="num-fila-compra rl-1">Paqueteria</td>
+                        <td style="border-right:2px solid #000;"></td>
+                        <td class="rl-1">hello</td>
+                    </tr>
+                    <tr>
+                        <td class="num-fila-compra rl-1">Monto total</td>
+                        <td style="border-right:2px solid #000;"></td>
+                        <td class="rl-1">hello</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <?php else: 
         Header ("Location: index.php");
         endif;
     ?>
 
-
-
     <!--footer-->
     <?php include("templates/footer.php")?>
-
-    <!--Jquery JS-->
-    <script src="assets/js/jquery-3.5.1.js "></script>
 
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>

@@ -117,9 +117,7 @@
     <!--footer-->
     <?php include("templates/footer.php")?>
 
-    <!--Jquery JS-->
-    <script src="assets/js/jquery-3.5.1.js "></script>
-
+  
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>
 

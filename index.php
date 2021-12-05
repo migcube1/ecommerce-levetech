@@ -75,7 +75,7 @@
                 <img class="card-imagen" src="assets/img/productos/<?= $producto['imagen']?>"
                     alt="<?= $producto['nombre'] ?>">
                 <div class="card-contenido ">
-                    <p style="height: 20vh;"> <?= $producto['descripcion'] ?></p>
+                    <p> <?= $producto['descripcion'] ?></p>
                     <h3 class="mi-1 ">$ <?= number_format($producto['precioOferta'],2) ?></h3>
                     <h5 class="mi-0 texto-gris ">Antes: $ <?= number_format($producto['precio'],2)?></h5>
                     <h5 class="mi-0 texto-gris ">Costo de envío: $99.99</h5>

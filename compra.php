@@ -1,6 +1,6 @@
 <?php
-    include('config/config.php');
-    include('controladores/Carrito.php');  
+include('config/config.php');
+include('controladores/Carrito.php');
 
 ?>
 
@@ -24,22 +24,22 @@
 
 <body>
     <!--header-->
-    <?php include("templates/header.php")?>
+    <?php include("templates/header.php") ?>
 
 
-    <div class="contenedor">
-        <div class="bg-gris texto-centrado texto-blanco r-2">
+    <div class="contenedor" style="height:60vh">
+        <div class="bg-gris texto-centrado texto-blanco r-2 borde">
             <h2 class="r-1">¡Listo!</h2>
             <hr>
             <h3 class="r-1">Su compra se realizó con éxito</h3>
-            <a class="boton boton-azul" href="index.php">
-            <i class='bx bx-undo md-1'></i>Regresar
+            <a class="boton boton-azul mx-3" href="index.php">
+                <i class='bx bx-undo md-1'></i>Regresar
             </a>
         </div>
     </div>
 
     <!--footer-->
-    <?php include("templates/footer.php")?>
+    <?php include("templates/footer.php") ?>
 
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>

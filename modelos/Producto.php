@@ -1,8 +1,9 @@
 <?php
 
-require_once ('config/Conexion.php');
+require_once('config/Conexion.php');
 
-class Producto {
+class Producto
+{
 
     /** Conexión a la base de datos */
     private $conexion;
@@ -10,12 +11,14 @@ class Producto {
     /**
      * Construye  un objeto de la conexión a la base de datos.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->conexion = new Conexion();
     }
 
-    public function obtenerProductos(){
-        
+    public function obtenerProductos()
+    {
+
         try {
             $connection = $this->conexion->conectar();      //Realizamos conexión
             $query = 'SELECT * FROM producto';              //Consulta
@@ -28,5 +31,4 @@ class Producto {
 
         return $datos;
     }
-
 }

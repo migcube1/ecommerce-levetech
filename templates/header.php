@@ -1,7 +1,7 @@
 <header>
     <nav class="nav ">
         <a href="index.php" class="nav-logo nav-enlace">
-            <img src="assets/img/logotipos/levetech-icon-azul.png " alt="icono levetech" class="md-1"> 
+            <img src="assets/img/logotipos/levetech-icon-azul.png " alt="icono levetech" class="md-1">
             Levetech Shop
         </a>
         <button type="button" class=" nav-toggle ">
@@ -21,10 +21,10 @@
 
             <li class="nav-item ">
                 <a href="carrito.php" class="nav-menu-enlace ">
-                    Carrito (<?= empty($_SESSION['CARRITO'])?0:count($_SESSION['CARRITO']) ?>)
+                    Carrito (<?= empty($_SESSION['CARRITO']) ? 0 : count($_SESSION['CARRITO']) ?>)
                 </a>
             </li>
-            
+
         </ul>
     </nav>
 </header>

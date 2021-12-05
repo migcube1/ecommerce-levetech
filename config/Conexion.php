@@ -3,19 +3,26 @@
 /**
  * Clase que representa la conexión a la base de datos.
  */
-class Conexion {
-    
-    private $hostname;      /** Nombre del servidor web*/ 
-    private $database;      /**  Nombre de la base de datos*/ 
-    private $usuario;       /** Nombre del usuario*/ 
-    private $password;      /**  Contraseña del usuario*/ 
-    private static $conexion;  /**  Conexión estatica de la base de datos*/ 
+class Conexion
+{
+
+    private $hostname;
+    /** Nombre del servidor web*/
+    private $database;
+    /**  Nombre de la base de datos*/
+    private $usuario;
+    /** Nombre del usuario*/
+    private $password;
+    /**  Contraseña del usuario*/
+    private static $conexion;
+    /**  Conexión estatica de la base de datos*/
 
     /**
      * Constructor en el que se establece la conexión a la base de datos a una variable para poder
      * utilizarla posterirormente.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->hostname = 'localhost';
         $this->database = 'levetech';
         $this->usuario = 'root';
@@ -25,7 +32,8 @@ class Conexion {
     /**
      * Realiza la conexión a la base de datos.
      */
-    public function conectar() {
+    public function conectar()
+    {
 
         try {
             if (is_null(self::$conexion)) {
@@ -38,7 +46,4 @@ class Conexion {
         }
         return NULL;
     }
-
 }
-
-?>

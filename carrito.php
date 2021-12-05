@@ -1,8 +1,8 @@
 <?php
-    include('config/config.php');
-    include('controladores/Carrito.php');
+include('config/config.php');
+include('controladores/Carrito.php');
 
-    $total = 0;
+$total = 0;
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +27,9 @@
 
 <body>
     <!--header-->
-    <?php include("templates/header.php")?>
+    <?php include("templates/header.php") ?>
 
-    <div class="contenedor" height="300vh">
+    <div class="contenedor" style="min-height:60vh">
         <h2>Contenido del carrito</h2>
         <table class="basket r-2">
             <thead class="bg-rojo">
@@ -43,47 +43,46 @@
                 </tr>
             </thead>
 
-            <?php if ($mensaje!=""): ?>
+            <?php if ($mensaje != "") : ?>
 
-            <div class="contenedor bg-verde">
-                <h1><?= $mensaje ?></h1>
-            </div>
+                <div class="alerta alerta-verde" role="alert">
+                    <?= $mensaje ?>
+                </div>
 
             <?php endif; ?>
 
 
-            <?php if (isset($_SESSION['CARRITO'])):
-                    foreach($_SESSION['CARRITO'] as $producto): 
+            <?php
+            if (isset($_SESSION['CARRITO'])) :
+                foreach ($_SESSION['CARRITO'] as $producto) :
             ?>
 
-            <tbody>
-                <tr>
-                    <td class="img_Producto r-1">
-                        <img class="" src="assets/img/productos/<?= $producto['imagen']?>"
-                            alt="<?= $producto['nombre'] ?>">
-                    </td>
-                    <td class="descripcion_Producto r-1"><?= $producto['nombre']?></td>
-                    <td class="precio_Producto r-1"> $ <?= number_format($producto['precio'])?></td>
-                    <td class="num_Producto r-1"><?= $producto['cantidad']?></td>
-                    <td class="num_Producto r-1"> $ <?= number_format($producto['cantidad'] * $producto['precio'],2)?>
-                    </td>
-                    <td class="num_Producto r-1">
-                        <form action="" method="post">
-                            <input type="hidden" name="claveProducto" id="claveProducto"
-                                value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>" class="d-none">
-                            <button type="submit" name="btnAccion" value="Eliminar" class="boton boton-rojo">
-                                <i class='bx bxs-trash-alt'></i> Eliminar
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="img_Producto r-1">
+                                <img class="" src="assets/img/productos/<?= $producto['imagen'] ?>" alt="<?= $producto['nombre'] ?>">
+                            </td>
+                            <td class="descripcion_Producto r-1"><?= $producto['nombre'] ?></td>
+                            <td class="precio_Producto r-1"> $ <?= number_format($producto['precio']) ?></td>
+                            <td class="num_Producto r-1"><?= $producto['cantidad'] ?></td>
+                            <td class="num_Producto r-1"> $ <?= number_format($producto['cantidad'] * $producto['precio'], 2) ?>
+                            </td>
+                            <td class="num_Producto r-1">
+                                <form action="" method="post">
+                                    <input type="hidden" name="claveProducto" id="claveProducto" value="<?= openssl_encrypt($producto['claveProducto'], METHOD, KEY) ?>" class="d-none">
+                                    <button type="submit" name="btnAccion" value="Eliminar" class="boton boton-rojo">
+                                        <i class='bx bxs-trash-alt'></i> Eliminar
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
 
 
-            <?php 
-                $total+= $producto['cantidad'] * $producto['precio'];
-                endforeach; 
-                endif;
+            <?php
+                    $total += $producto['cantidad'] * $producto['precio'];
+                endforeach;
+            endif;
             ?>
 
             <tfoot>
@@ -94,36 +93,32 @@
                     <td></td>
                     <td class="ry-2 texto-centrado bg-gris">Total a pagar: </td>
                     <td class="ry-2 texto-centrado bg-gris">
-                        <b> $ <?= number_format($total,2) ?> </b>
+                        <b> $ <?= number_format($total, 2) ?> </b>
                     </td>
                 </tr>
             </tfoot>
         </table>
     </div>
 
-
-
     <div class="contenedor d-flex justificar-contenido-final">
         <a type="button" class="boton boton-verde md-1" href="index.php">
             <i class='bx bx-undo md-1'></i> Regresar
         </a>
-        <?php if (!empty($_SESSION['CARRITO'])): ?>
-        <a type="submit" class="boton boton-azul" name="btnAccion" value="Comprar" href="pago.php">
-            <i class='bx bxs-cart-alt md-1'></i>Comprar carrito
-        </a>
+        <?php if (!empty($_SESSION['CARRITO'])) : ?>
+            <a type="submit" class="boton boton-azul" name="btnAccion" value="Comprar" href="pago.php">
+                <i class='bx bxs-cart-alt md-1'></i>Comprar carrito
+            </a>
         <?php endif; ?>
     </div>
 
     <!--footer-->
-    <?php include("templates/footer.php")?>
+    <?php include("templates/footer.php") ?>
 
-  
+
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>
 
 
 </body>
-
-
 
 </html>

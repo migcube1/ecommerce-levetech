@@ -1,8 +1,9 @@
 <?php
 
-require_once ('config/Conexion.php');
+require_once('config/Conexion.php');
 
-class Envio {
+class Envio
+{
 
     /** Conexión a la base de datos */
     private $conexion;
@@ -10,11 +11,13 @@ class Envio {
     /**
      * Construye  un objeto de la conexión a la base de datos.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->conexion = new Conexion();
     }
 
-    public function obtenerEnvios(){
+    public function obtenerEnvios()
+    {
 
         try {
             $connection = $this->conexion->conectar();      //Realizamos conexión
@@ -27,8 +30,5 @@ class Envio {
         }
 
         return $datos;
-
     }
-
-    
 }

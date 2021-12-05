@@ -1,6 +1,6 @@
 <?php
-    include('config/config.php');
-    include('controladores/carrito.php');
+include('config/config.php');
+include('controladores/carrito.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
 
 <body>
     <!--header-->
-    <?php include("templates/header.php")?>
+    <?php include("templates/header.php") ?>
 
     <!--banner-->
     <div class="contenido-ancho banner p-0">
@@ -71,7 +71,7 @@
     </div>
 
     <!--footer-->
-    <?php include("templates/footer.php")?>
+    <?php include("templates/footer.php") ?>
 
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>

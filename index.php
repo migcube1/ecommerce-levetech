@@ -1,10 +1,10 @@
 <?php
-    include('config/config.php');
-    include('modelos/Producto.php');
-    include('controladores/carrito.php');
+include('config/config.php');
+include('modelos/Producto.php');
+include('controladores/carrito.php');
 
-    $ProductoModelo = new Producto();
-    $productos = $ProductoModelo ->obtenerProductos();
+$ProductoModelo = new Producto();
+$productos = $ProductoModelo->obtenerProductos();
 
 ?>
 
@@ -28,7 +28,7 @@
 
 <body>
     <!--header-->
-    <?php include("templates/header.php")?>
+    <?php include("templates/header.php") ?>
 
     <!--slider-->
     <div class="contenedor-slider contenedor-ancho ">
@@ -57,11 +57,11 @@
         </div>
     </div>
 
-    <?php if ($mensaje!=""): ?>
+    <?php if ($mensaje != "") : ?>
 
-    <div class="alerta alerta-verde" role="alert" >
-        <?= $mensaje ?>
-    </div>
+        <div class="alerta alerta-verde" role="alert">
+            <?= $mensaje ?>
+        </div>
 
     <?php endif; ?>
 
@@ -69,39 +69,38 @@
     <div class="contenedor-ancho ">
         <div class="grid col-4 med-col-2 peq-col-1 ">
 
-            <?php foreach($productos as $producto): ?>
+            <?php
+            foreach ($productos as $producto) :
+                if ($producto['activo'] == 1) :
+            ?>
+                    <div class="card ">
+                        <img class="card-imagen" src="assets/img/productos/<?= $producto['imagen'] ?>" alt="<?= $producto['nombre'] ?>">
+                        <div class="card-contenido ">
+                            <p> <?= $producto['descripcion'] ?></p>
+                            <h3 class="mi-1 ">$ <?= number_format($producto['precioOferta'], 2) ?></h3>
+                            <h5 class="mi-0 texto-gris ">Antes: $ <?= number_format($producto['precio'], 2) ?></h5>
+                            <h5 class="mi-0 texto-gris ">Costo de envío: $99.99</h5>
+                            <h5 class="mi-0 texto-gris ">Disponibles: <?= $producto['stock'] ?> pz</h5>
+                            <h5 class="mi-1 texto-gris ">Puntuación: <?= $producto['puntuacion'] ?></h5>
+                            <form action="" method="post">
+                                <input type="hidden" name="claveProducto" id="claveProducto" value="<?= openssl_encrypt($producto['claveProducto'], METHOD, KEY) ?>" class="d-none">
+                                <input type="hidden" name="nombre" id="nombre" value="<?= openssl_encrypt($producto['descripcion'], METHOD, KEY) ?>" class="d-none">
+                                <input type="hidden" name="precio" id="precio" value="<?= openssl_encrypt($producto['precioOferta'], METHOD, KEY) ?>" class="d-none">
+                                <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1, METHOD, KEY) ?>" class="d-none">
+                                <input type="hidden" name="imagen" id="imagen" value="<?= openssl_encrypt($producto['imagen'], METHOD, KEY) ?>" class="d-none">
 
-            <div class="card ">
-                <img class="card-imagen" src="assets/img/productos/<?= $producto['imagen']?>"
-                    alt="<?= $producto['nombre'] ?>">
-                <div class="card-contenido ">
-                    <p> <?= $producto['descripcion'] ?></p>
-                    <h3 class="mi-1 ">$ <?= number_format($producto['precioOferta'],2) ?></h3>
-                    <h5 class="mi-0 texto-gris ">Antes: $ <?= number_format($producto['precio'],2)?></h5>
-                    <h5 class="mi-0 texto-gris ">Costo de envío: $99.99</h5>
-                    <h5 class="mi-0 texto-gris ">Disponibles: <?= $producto['stock']?> pz</h5>
-                    <h5 class="mi-1 texto-gris ">Puntuación: <?= $producto['puntuacion']?></h5>
-                    <form action="" method="post">
-                        <input type="hidden" name="claveProducto" id="claveProducto"
-                            value="<?= openssl_encrypt($producto['claveProducto'],METHOD,KEY)?>" class="d-none">
-                        <input type="hidden" name="nombre" id="nombre"
-                            value="<?= openssl_encrypt($producto['descripcion'],METHOD,KEY)?>" class="d-none">
-                        <input type="hidden" name="precio" id="precio"
-                            value="<?= openssl_encrypt($producto['precioOferta'],METHOD,KEY) ?>" class="d-none">
-                        <input type="hidden" name="cantidad" id="cantidad" value="<?= openssl_encrypt(1,METHOD,KEY)?>"
-                            class="d-none">
-                        <input type="hidden" name="imagen" id="imagen"
-                            value="<?= openssl_encrypt($producto['imagen'],METHOD,KEY) ?>" class="d-none">
+                                <button type="submit" name="btnAccion" value="Agregar" class="boton boton-azul ">
+                                    <i class='bx bxs-cart-add md-1'></i>Añadir
+                                </button>
+                            </form>
 
-                        <button type="submit" name="btnAccion" value="Agregar" class="boton boton-azul ">
-                            <i class='bx bxs-cart-add md-1'></i>Añadir
-                        </button>
-                    </form>
+                        </div>
+                    </div>
 
-                </div>
-            </div>
-
-            <?php endforeach; ?>
+            <?php
+                endif;
+            endforeach;
+            ?>
 
         </div>
 
@@ -147,7 +146,7 @@
     </div>
 
     <!--footer-->
-    <?php include("templates/footer.php")?>
+    <?php include("templates/footer.php") ?>
 
     <!-- JS -->
     <script src="assets/js/scripts.js "></script>

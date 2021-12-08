@@ -42,6 +42,7 @@ create table PRODUCTO (
     stock int,
     puntuacion float,
     imagen varchar(50),
+    activo int default 1,
 
     primary key (claveProducto)
     

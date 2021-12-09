@@ -28,7 +28,7 @@ include('controladores/carrito.php');
     <div class="contenido-ancho banner p-0">
         <div class="banner-img r-5 texto-blanco">
             <h1>Levetech Shop</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Manteniendo siempre los mejores productos y precios del mercado</p>
         </div>
     </div>
 
@@ -40,9 +40,7 @@ include('controladores/carrito.php');
                 <div class="texto-centrado texto-blanco ms-2">
                     <h1>Misión</h1>
                     <p class="texto-justificado r-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem facere fugiat
-                        ducimus, quaerat inventore, laudantium quo illum ullam voluptatibus, sed obcaecati et architecto
-                        molestiae at! Maxime voluptatibus soluta deleniti.
+                        Proveer a los usuarios un lugar donde puede elegir y comprar fácilmente componentes de computadora dentro de un amblio catálogo de productos.
                     </p>
 
                 </div>
@@ -52,9 +50,7 @@ include('controladores/carrito.php');
                 <div class="texto-centrado texto-blanco ms-2">
                     <h1>Visión</h1>
                     <p class="texto-justificado r-2">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum hic quae aspernatur nobis
-                        corporis amet, vero laboriosam animi aut iure sint similique magni deserunt ipsam consequatur in
-                        repudiandae expedita? Eius.
+                    Ir hacia un crecimiento rentable y mejorar para ofrecer cada vez más nuevos productos de calidad.
                     </p>
 
                 </div>

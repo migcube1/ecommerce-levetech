@@ -43,6 +43,15 @@ $productos = $ProductoModelo->obtenerProductos();
     <div class="contenedor-slider contenedor-ancho ">
         <!--imágenes del slider-->
         <div class="slider fade active-slider ">
+            <img src="assets/img/slider/img_mapa.jpg " alt=" " usemap="#componentes">
+            <map name="componentes">
+            <area shape="rect" coords="310,36,1090,310" href="https://www.cyberpuerta.mx/Computo-Hardware/Monitores/Monitores/Monitor-Curvo-Samsung-LC24F390FHL-LED-23-5-Full-HD-Widescreen-FreeSync-HDMI-Negro.html" target="_blank">
+            <area shape="poly" coords="1204,155,1466,12,1756,59,1893,436,1485,477,1180,452,1204,155" href="https://www.cyberpuerta.mx/Computadoras/PC-s-de-Escritorio/Computadora-Gamer-Xtreme-PC-Gaming-CM-91018-AMD-Athlon-300GE-3-40GHz-8GB-1TB-Wi-Fi-Windows-10-Prueba-Negro.html" target="_blank"> 
+            <area shape="poly" coords="37,427,128,383,656,430,490,535,37,427" href="https://www.cyberpuerta.mx/Computo-Hardware/Dispositivos-de-Entrada/Teclados/Teclado-Gamer-Vorago-Start-The-Game-RGB-Alambrico-Negro-Espanol.html" target="_blank"> 
+            <area shape="poly" coords="772,450,883,400,1144,434,1050,500,772,450" href="https://www.cyberpuerta.mx/Computo-Hardware/Dispositivos-de-Entrada/Mouse/Mouse-Gamer-Logitech-Optico-G203-LightSync-Alambrico-USB-8000DPI-Negro.html" target="_blank"> 
+            </map>
+        </div>
+        <div class="slider fade ">
             <img src="assets/img/slider/ofertas_1.jpg " alt=" ">
         </div>
         <div class="slider fade ">
@@ -63,6 +72,7 @@ $productos = $ProductoModelo->obtenerProductos();
             <span class="dot active-dot " onclick="positionSlider(1) "></span>
             <span class="dot " onclick="positionSlider(2) "></span>
             <span class="dot " onclick="positionSlider(3) "></span>
+            <span class="dot " onclick="positionSlider(4) "></span>
         </div>
     </div>
 

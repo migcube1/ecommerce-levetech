@@ -1,3 +1,12 @@
+<!--
+Negocios Electrónicos y Desarrollo Web
+Proyecto Final: Sitio Web Levetech
+Autores:
+- Leyva Bejarano Miguel Angel
+- Velasco Arciniega Ernesto
+Semestre: 2022-1
+-->
+
 <?php
 include('config/config.php');
 include('modelos/Producto.php');

@@ -35,7 +35,7 @@ class Orden
             // Agregamos el Domicilio
             if (!empty($claveCliente)) {  //Si existe el cliente en la BD
                 $query = "INSERT INTO domicilio(calle,numero, cp, colonia, alcaldia, estado, claveCliente) VALUES ('" . $datos['calle'] . "'," . $datos['numero'] . "," . $datos['cp'] . ",'" . $datos['colonia'] . "','" . $datos['alcaldia'] . "','" . $datos['estado'] . "'," . $claveCliente . ");";
-                $connection->exec($query);  //Ajecutamos la consulta
+                $connection->exec($query);  //Eupjecutamos la consulta
 
                 $claveDomicilio = $connection->lastInsertId(); //Obtenemos la clave del domicilio
 
@@ -65,6 +65,10 @@ class Orden
 
                 foreach ($datos['carrito'] as $index => $producto) {  //Para cada producto del carrito
                     $query = "INSERT INTO detalle_orden(cantidad, precioUnitario, claveOrden, claveProducto) VALUES(" . $producto['cantidad'] . "," . $producto['precio'] . "," . $claveOrden . "," . $producto['claveProducto'] . ");";
+
+                    $connection->exec($query);
+
+                    $query = "UPDATE producto SET stock=stock -" . $producto['cantidad'] . " WHERE claveProducto=" . $producto['claveProducto'];
 
                     $connection->exec($query);
                 }

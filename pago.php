@@ -165,18 +165,40 @@ $envios = $EnvioModelo->obtenerEnvios();
                                 <label for="codigo_seguridad" class="form-label"> Código de Seguridad</label>
                                 <input type="text" name="codigo_seguridad" class="form-input" maxlength="3" required>
                             </div>
-
-                            <?php
-                            $total = 0;
-                            foreach ($_SESSION['CARRITO'] as $producto) :
-                                $total += $producto['cantidad'] * $producto['precio'];
-                            endforeach;
-                            ?>
-                            <div class="span-1 peq-span-3">
-                                <label for="monto" class="form-label"> Monto Total</label>
-                                <input readonly="readonly" type="text" name="monto" class="form-input" value="<?= $total ?>">
-                            </div>
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="grid col-1">
+                    <!--Monto Total-->
+                    <div class="span-1">
+
+                        <div class="texto-centrado mi-1">
+                            <h3>Monto Total</h3>
+                        </div>
+                        <hr>
+
+                        <?php
+                        $total = 0;
+                        foreach ($_SESSION['CARRITO'] as $producto) :
+                            $total += $producto['cantidad'] * $producto['precio'];
+                        endforeach;
+                        ?>
+
+                        <div class="span-1 peq-span-3 r-2">
+                            <h4 class="mi-1">
+                                <strong>Carrito:</strong> $ <?= number_format($total, 2) ?>
+                            </h4>
+                            <h4 class="mi-1"><strong>Envío: </strong> $ 99.99</h4>
+                            <?php $total += 99.99; ?>
+                            <h4 class="texto-verde">
+                                <strong>Monto Total:</strong> $ <?= number_format($total, 2) ?>
+                            </h4>
+
+                            <input class="d-none" type="text" name="monto" class="form-input" value="<?= $total ?>">
+                        </div>
+
 
                     </div>
                 </div>
@@ -186,11 +208,6 @@ $envios = $EnvioModelo->obtenerEnvios();
                         <i class='bx bx-undo md-1'></i> Regresar
                     </a>
                     <?php if (!empty($_SESSION['CARRITO'])) : ?>
-
-                        <a type="button" class="boton boton-gris md-1" formaction="#info-compra">
-                            <i class='bx bxl-paypal md-1'></i>Ver informe
-                        </a>
-
                         <button type="submit" class="boton boton-azul" name="btnAccion" value="Pagar">
                             <i class='bx bxl-paypal md-1'></i>Pagar
                         </button>

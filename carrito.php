@@ -36,9 +36,9 @@ $total = 0;
                 <tr class="head_Basket">
                     <th class="texto-centrado">PRODUCTO</th>
                     <th class="texto-centrado">DESCRIPCIÓN</th>
-                    <th class="texto-centrado">PRECIO</th>
-                    <th class="texto-centrado">CANTIDAD</th>
-                    <th class="texto-centrado">TOTAL</th>
+                    <th class="texto-centrado rx-3">PRECIO</th>
+                    <th class="texto-centrado rx-1">CANTIDAD</th>
+                    <th class="texto-centrado rx-4">TOTAL</th>
                     <th class="texto-centrado">ACCIONES</th>
                 </tr>
             </thead>
@@ -63,9 +63,9 @@ $total = 0;
                                 <img class="" src="assets/img/productos/<?= $producto['imagen'] ?>" alt="<?= $producto['nombre'] ?>">
                             </td>
                             <td class="descripcion_Producto r-1"><?= $producto['nombre'] ?></td>
-                            <td class="precio_Producto r-1"> $ <?= number_format($producto['precio']) ?></td>
-                            <td class="num_Producto r-1"><?= $producto['cantidad'] ?></td>
-                            <td class="num_Producto r-1"> $ <?= number_format($producto['cantidad'] * $producto['precio'], 2) ?>
+                            <td class="precio_Producto texto-centrado r-1"> $ <?= number_format($producto['precio']) ?></td>
+                            <td class="num_Producto texto-centrado r-1"><?= $producto['cantidad'] ?></td>
+                            <td class="num_Producto texto-centrado r-1"> $ <?= number_format($producto['cantidad'] * $producto['precio'], 2) ?>
                             </td>
                             <td class="num_Producto r-1">
                                 <form action="" method="post">

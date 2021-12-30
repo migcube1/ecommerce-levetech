@@ -100,10 +100,10 @@ add foreign key (claveCliente) references CLIENTE(claveCliente) on delete cascad
 
 /** Insertamos datos en la Base de datos **/
 
-insert into envio(medioEnvio, costoEnvio)
+insert into ENVIO(medioEnvio, costoEnvio)
 values('DHL', 99.99), ('Fedex',99.99);
 
-insert into producto(precio, precioOferta, nombre, descripcion,stock, puntuacion,imagen)
+insert into PRODUCTO(precio, precioOferta, nombre, descripcion,stock, puntuacion,imagen)
 values
 (619.99, 559.99, 'SSD ADATA SU630 120GB','SSD Adata Ultimate SU630 QLC 3D, 240GB, SATA, 2.5", 7mm',200, 4.3,'LVT-ADATA-ASU630SS-240GQ-R.jpg'),
 (1619.00, 1479.00, 'SSD Kingston KC2500 500GB','SSD Kingston KC2500, 500GB, PCI Express 3.0, M.2, Escritura 2500 MB/s,  3500 MB/s',104,4.5,'LVT-KINGSTON-SKC2500M8-500G.jpg'),

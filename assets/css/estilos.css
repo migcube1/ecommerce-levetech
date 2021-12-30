@@ -445,6 +445,16 @@ footer {
   align-items: center;
 }
 
+.nav-texto{
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+
+.nav-texto p{
+  font-size: 10px;
+}
+
 .nav-logo img {
   height: 50px;
   width: 50px;

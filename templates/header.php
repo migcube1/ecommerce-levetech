@@ -2,7 +2,10 @@
     <nav class="nav ">
         <a href="index.php" class="nav-logo nav-enlace">
             <img src="assets/img/logotipos/levetech-icon-azul.png " alt="icono levetech" class="md-1">
-            Levetech Shop
+            <div class="nav-texto">
+                <h3>Levetech Shop</h3>
+                <p>Leyva Bejarano Miguel Angel & Velasco Arciniega Ernesto</p>
+            </div>
         </a>
         <button type="button" class=" nav-toggle ">
             <i class='bx bx-menu'></i>
